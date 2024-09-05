@@ -17,11 +17,11 @@ Software: ENVI Classic 6.0
 
 > Click on *ENVI Classic 6.0*
 
-> ENVI Classic will Start up and you will see a toolbar
+ENVI Classic will Start up and you will see a toolbar
 
 ![ENVI Classic toolbar](Images/Lab02_Step01_ENVIclassic_bar.PNG)
 
-
+***
 ## Step 2. Load Landsat 8 Bands
 
 Next we will load landsat 8 bands 1-7 note that when you download a landsat tile you get a seperate file for each band and also a .txt file containing metadata about the Landsat Product you have downloaded.
@@ -50,18 +50,19 @@ Recall that Landsat8 OLI/TIRS has 11 Bands, we will only be working with bands 1
 
 ![Open .tiff files](Images/Lab02_Step02_OpenExternal.PNG) 
 
-> Navigate to the location of the Landsat 8 bands on your computer or on a local drive
+ Navigate to the location of the Landsat 8 bands on your computer or on a local drive
 
 > Hold Shift and Select all files, they should all look like this: LC08_L2SP_037035_20210608_20210615_02_T1_SR_B**N**.TIF
 
-> Note: **N** = 1-7
+Note: **N** = 1-7
 
 ![Select all files](Images/Lab02_Step02_SelectFiles.PNG)
 
-> Next you should see a new window pop up containing the available bands, each loaded as a seperate image with 1-Band each, we will combine them into a single image containing 7 bands in step 4 below.
+Next you should see a new window pop up containing the available bands, each loaded as a seperate image with 1-Band each, we will combine them into a single image containing 7 bands in step 4 below.
 
 ![Available Bands](Images/Lab02_Step02_AvailableBands.PNG)
 
+***
 ## Step 3. Calibrate each band
 
 We need to calibrate each individual band using the metadata and convert the DN (Digital Number) values to Radiance values. But now is also a good time to look at the meta-data file associated with the bands.
@@ -70,20 +71,18 @@ We need to calibrate each individual band using the metadata and convert the DN 
 
 > Create a new folder/directory called **Calibrated** ... where we will store the calibrated files. 
 
-> Then select the metadata file *LC08_L2SP_037035_20210608_20210615_02_T1_MTL.txt*  and *Open with* Notepad
+> -- Select the metadata file *LC08_L2SP_037035_20210608_20210615_02_T1_MTL.txt*  and *Open with* Notepad
 
 ![Create Dir - Open Metadata](Images/Lab02_Step03_OpenMetadata.PNG)
 
-> Near the bottom of the Meta Data File you will see 
+Near the bottom of the Meta Data File you will see 
 
 * MAP_PROJECTION = 'UTM' - this is the Universal Tranverse Mercator projection which uses $meters$
 * DATUM = 'WGS84'
 * UTM_ZONE = 12
 * GRID_CELL_SIZE_REFLECTIVE = 30.00  - ($meters$ because of UTMs)
 
-> Now that we have checked the Metadata and everything looks as expected lets **Calibrate the Images**
-
-> We will calibrate each image **One-at-a-time**
+Now that we have checked the Metadata and everything looks as expected lets **Calibrate the Images**. We will calibrate each image **One-at-a-time**
 
 > From the ENVI classic Toolbar -- Select: *Basic Tools* // *PreProcessing* // *Calibration utilities* // *Landsat calibration* 
 
@@ -103,13 +102,14 @@ We need to calibrate each individual band using the metadata and convert the DN 
 
 > Repeat with bands 3 through 7
 
-> When you are finished you Calibrated Directory should contain 14 files:
+When you are finished you Calibrated Directory should contain 14 files:
 
-> LC08_B**N**cal; **N** = 1 - 7 
-> LC08_B**N**cal.hdr; **N** = 1 - 7
+LC08_B**N**cal; **N** = 1 - 7 
+LC08_B**N**cal.hdr; **N** = 1 - 7
 
 ![Calibrated Directory](Images/Lab02_Step03_CalDir.PNG)
 
+*** 
 ## Step 4. Create a layer/band stack
 
 Now we need to load the calibrated bands into ENVI as a layer stack, or a multi-band image
@@ -118,7 +118,7 @@ Now we need to load the calibrated bands into ENVI as a layer stack, or a multi-
 
 ![Select Layer Stacking](Images/Lab02_Step04_select_stack.PNG)
 
-> The Layer Stacking Paremeters window will now open
+The Layer Stacking Paremeters window will now open
 
 > Click *Import File* on the Layer Stacking Parameters window then Navigate to your *Calibrated* Directory and select the calibrated bands 1 - 7
 
@@ -130,20 +130,22 @@ Now we need to load the calibrated bands into ENVI as a layer stack, or a multi-
 
 > Name the stack **LC08_B1_B7_cal_stack, save it in the *Calibrated* directory
 
-> Notice on the right side of the Layer Stacking Paramters window that it confirms that the stack is UTM Zone 12, WGS84, and the pixel size is 30 meters.
+Notice on the right side of the Layer Stacking Paramters window that it confirms that the stack is UTM Zone 12, WGS84, and the pixel size is 30 meters.
 
 ![Save and compile stack](Images/Lab02_Step04_SaveStack.PNG)
 
 > Click **OK**
 
+***
 ## Step 5. Open Stacked Image
 
 > Now go to your **Avialable Bands List** Window and click Load Band
 
-> A Greyscale image will appear with three windows showing Band 1 (though its really band seven) I know it is confusing which is why in the next step we will reorder and rename the bands in the bands list.
+A Greyscale image will appear with three windows showing Band 1 (though its really band seven) I know it is confusing which is why in the next step we will reorder and rename the bands in the bands list.
 
 ![Load Greyscale](Images/Lab02_Step05_LoadImage.PNG)
 
+***
 ## Step 6. Edit Band Names Attributes 
 
 > From the ENVI classic Toolbar -- Select: *File* // *Edit ENVI header*
@@ -159,6 +161,8 @@ Now we need to load the calibrated bands into ENVI as a layer stack, or a multi-
 > Once completed the Avilable Bands List window should show the new names and they should be in order 1-7 from top to bottom 
 
 ![New band names](Images/Lab02_Step06_NewBandNames.PNG)
+
+***
 
 ## Step 7. Edit Band Attributes
 
@@ -190,16 +194,18 @@ Next we will edit the attributes and change the units to wavelength and select t
 
 ![Finsihed step 7](Images/Lab02_Step07_finished.PNG)
 
+***
 ## Step 8. Explore the Image
 
 > In the Available Bands List window, toggle from Gray Scale to RGB Color and Click Load RGB selecting Band_4 for R or Red, Band_3 for G or Green and Band_2 for B or Blue
 
-> Three display windows should now pop up and be displaying the image in True Color RGB
+Three display windows should now pop up and be displaying the image in True Color RGB
 
 > Click on the largest window and scroll to some spot on the map with your cursor right-click and select *Cursor Location/Value* and watch as the Data values for RG & B change as our scroll across the map. 
 
 ![Cursor Location/Value](Images/Lab02_Step08_RGB.PNG)
 
+***
 ## Step 9. Display different band combinations
 
 > Have a look at some [common band combinations]([Common Landsat Band Combinations](https://www.usgs.gov/media/images/common-landsat-band-combinations)
@@ -210,9 +216,7 @@ Next we will edit the attributes and change the units to wavelength and select t
 **At a minimum try:**
 
 > **Color Infrared (CIR)** 
-
-> using bands 5,4 & 3 for RG & B respectively
+using bands 5,4 & 3 for RG & B respectively
 
 > **False Color (Vegetation Analysis)**
-
-> using bands 6,5 & 4 for RG & B respectively
+using bands 6,5 & 4 for RG & B respectively
