@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>From RStudio – Applied Remote Sensing</title>
+<title>Lab 2 - Getting your image ready for classification – Applied Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../Lab-Exercises/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -80,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">From RStudio</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Lab-Exercises/index.html">Lab Exercises</a></li><li class="breadcrumb-item"><a href="../Lab-Exercises/Lab-2.html">Lab 2 - Getting your image ready for classification</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,14 +154,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../Lab-Exercises/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Lab-Exercises/Lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lab-Exercises/Lab-2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 2 - Getting your image ready for classification</span></a>
   </div>
 </li>
@@ -147,32 +177,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a>
-  <ul class="collapse">
-  <li><a href="#rstudio-and-github" id="toc-rstudio-and-github" class="nav-link" data-scroll-target="#rstudio-and-github">RStudio and GitHub</a></li>
-  <li><a href="#clone-your-repo" id="toc-clone-your-repo" class="nav-link" data-scroll-target="#clone-your-repo">Clone your repo</a></li>
-  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link" data-scroll-target="#install-quarto">Install Quarto</a></li>
-  <li><a href="#rstudio-orientation" id="toc-rstudio-orientation" class="nav-link" data-scroll-target="#rstudio-orientation">RStudio orientation</a></li>
-  <li><a href="#visual-editor" id="toc-visual-editor" class="nav-link" data-scroll-target="#visual-editor">Visual Editor</a></li>
-  </ul></li>
-  <li><a href="#quarto-render" id="toc-quarto-render" class="nav-link" data-scroll-target="#quarto-render">Quarto render</a>
-  <ul class="collapse">
-  <li><a href="#make-a-small-change-and-render-it" id="toc-make-a-small-change-and-render-it" class="nav-link" data-scroll-target="#make-a-small-change-and-render-it">Make a small change and render it</a></li>
-  </ul></li>
-  <li><a href="#create-a-new-.rmd-page" id="toc-create-a-new-.rmd-page" class="nav-link" data-scroll-target="#create-a-new-.rmd-page">Create a new <code>.Rmd</code> page</a></li>
-  <li><a href="#update-_quarto.yml" id="toc-update-_quarto.yml" class="nav-link" data-scroll-target="#update-_quarto.yml">Update <code>_quarto.yml</code></a></li>
-  <li><a href="#authoring-tips" id="toc-authoring-tips" class="nav-link" data-scroll-target="#authoring-tips">Authoring tips</a></li>
-  <li><a href="#commit-and-push" id="toc-commit-and-push" class="nav-link" data-scroll-target="#commit-and-push">Commit and push!</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#step-1.-start-envi-classic" id="toc-step-1.-start-envi-classic" class="nav-link active" data-scroll-target="#step-1.-start-envi-classic">Step 1. Start ENVI Classic</a></li>
+  <li><a href="#step-2.-load-landsat-8-bands" id="toc-step-2.-load-landsat-8-bands" class="nav-link" data-scroll-target="#step-2.-load-landsat-8-bands">Step 2. Load Landsat 8 Bands</a></li>
+  <li><a href="#step-3.-calibrate-each-band" id="toc-step-3.-calibrate-each-band" class="nav-link" data-scroll-target="#step-3.-calibrate-each-band">Step 3. Calibrate each band</a></li>
+  <li><a href="#step-4.-create-a-layerband-stack" id="toc-step-4.-create-a-layerband-stack" class="nav-link" data-scroll-target="#step-4.-create-a-layerband-stack">Step 4. Create a layer/band stack</a></li>
+  <li><a href="#step-5.-open-stacked-image" id="toc-step-5.-open-stacked-image" class="nav-link" data-scroll-target="#step-5.-open-stacked-image">Step 5. Open Stacked Image</a></li>
+  <li><a href="#step-6.-edit-band-names-attributes" id="toc-step-6.-edit-band-names-attributes" class="nav-link" data-scroll-target="#step-6.-edit-band-names-attributes">Step 6. Edit Band Names Attributes</a></li>
+  <li><a href="#step-7.-edit-band-attributes" id="toc-step-7.-edit-band-attributes" class="nav-link" data-scroll-target="#step-7.-edit-band-attributes">Step 7. Edit Band Attributes</a></li>
+  <li><a href="#step-8.-explore-the-image" id="toc-step-8.-explore-the-image" class="nav-link" data-scroll-target="#step-8.-explore-the-image">Step 8. Explore the Image</a></li>
+  <li><a href="#step-9.-display-different-band-combinations" id="toc-step-9.-display-different-band-combinations" class="nav-link" data-scroll-target="#step-9.-display-different-band-combinations">Step 9. Display different band combinations</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/edit/main/quarto-workflows/rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/edit/main/Lab-Exercises/Lab-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Lab-Exercises/index.html">Lab Exercises</a></li><li class="breadcrumb-item"><a href="../Lab-Exercises/Lab-2.html">Lab 2 - Getting your image ready for classification</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">From RStudio</h1>
+<h1 class="title">Lab 2 - Getting your image ready for classification</h1>
 </div>
 
 
@@ -189,135 +211,349 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The RStudio software (called an IDE, integrated development environment) is an excellent way to edit files and interface with GitHub. Plus, as it is made by the same folks who make Quarto, it has many integrated features for streamlining your workflow with Quarto, including how it previews your edits and provides debugging support for yaml! <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto's RStudio tutorials</a> has great instructions on getting started with RStudio, including computations and authoring.</p>
-<p>Here is what you’ll need to do to set up and use RStudio with Quarto.</p>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<section id="rstudio-and-github" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio-and-github">RStudio and GitHub</h3>
-<p>For a workflow with RStudio and GitHub on your local computer, you will need four things:</p>
-<ol type="1">
-<li>R</li>
-<li>RStudio</li>
-<li>Git</li>
-<li>GitHub</li>
-</ol>
-<p>Follow the <a href="https://ucsb-meds.github.io/meds-install-guide.html">UCSB MEDS Installation Guide</a> for detailed instructions on how to create accounts, download, install, and configure on Mac and Windows. This takes about 20 minutes. (For an even more detailed walk-through, see <a href="https://docs.google.com/document/d/1zx2upJJqFZe94O3BQSMI56Z76s3haLXC0otKSpcZaJQ/edit">Allison Horst’s ESM 206 Google Doc</a>).</p>
-</section>
-<section id="clone-your-repo" class="level3">
-<h3 class="anchored" data-anchor-id="clone-your-repo">Clone your repo</h3>
-<p>You’ll start by cloning your repository into RStudio.</p>
-<p>File &gt; New Project &gt; Version Control &gt; Git &gt; paste your repository name.</p>
-<p><a href="https://rstudio-conf-2020.github.io/r-for-excel/github.html#clone-your-repository-using-rstudio">R for Excel Users: Clone your repository using RStudio</a> has detailed instructions and screenshots of these steps.</p>
-</section>
-<section id="install-quarto" class="level3">
-<h3 class="anchored" data-anchor-id="install-quarto">Install Quarto</h3>
-<p>Next, you’ll install Quarto: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>. After downloading, follow the installation wizard on your computer. When it is complete, you won’t see an application or any new software, but it is now available to RStudio (as well as all other applications on your computer, including the command line).</p>
-</section>
-<section id="rstudio-orientation" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio-orientation">RStudio orientation</h3>
-<p>Now let’s take a moment to get oriented. This is an RStudio project, which is indicated in the top-right. The bottom right pane shows all the files in your project; everything we’ve cloned from GitHub. We can open any RStudio project by opening its <code>.Rproj</code> file, or from RStudio File &gt; Open Project ….</p>
+<p>With this tutorial, we will load bands 1-7 from a Landsat 8 Image</p>
+<p><strong>Requirements:</strong></p>
+<p>Downloaded Landsat Tile images for bands 1 - 7 Software: ENVI Classic 6.0</p>
+<section id="step-1.-start-envi-classic" class="level2">
+<h2 class="anchored" data-anchor-id="step-1.-start-envi-classic">Step 1. Start ENVI Classic</h2>
+<blockquote class="blockquote">
+<p>In the search bar next to the windows icon type: <em>“ENVI”</em></p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-orientation.png" class="img-fluid figure-img" alt="Screenshot of the RStudio IDE highlighting the project name and files pane"></p>
-<figcaption>RStudio IDE highlighting the project name and files pane</figcaption>
+<p><img src="Images/Lab02_Step01_StartENVIclassic.PNG" class="img-fluid figure-img"></p>
+<figcaption>Open ENVI Classic</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Click on <em>ENVI Classic 6.0</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>ENVI Classic will Start up and you will see a toolbar</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step01_ENVIclassic_bar.PNG" class="img-fluid figure-img"></p>
+<figcaption>ENVI Classic toolbar</figcaption>
 </figure>
 </div>
 </section>
-<section id="visual-editor" class="level3">
-<h3 class="anchored" data-anchor-id="visual-editor">Visual Editor</h3>
-<p>The RStudio Visual Editor is quite new and has features that improve your writing experience. Working in the Visual Editor feels a bit like working in a Google Doc.</p>
-<p>Here’s an example showing the same file in the original Source Editor with content in markdown format and in the Visual Editor with content that looks more like it will appear in a live site. You can switch freely between these modes.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="step-2.-load-landsat-8-bands" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.-load-landsat-8-bands">Step 2. Load Landsat 8 Bands</h2>
+<p>Next we will load landsat 8 bands 1-7 note that when you download a landsat tile you get a seperate file for each band and also a .txt file containing metadata about the Landsat Product you have downloaded.</p>
+<p>Recall that Landsat8 OLI/TIRS has 11 Bands, we will only be working with bands 1-7 in this exercise Ultra-Blue to SWIR 2:</p>
+<p><strong>Operational Land Imager (OLI)</strong></p>
+<ul>
+<li>Band 1 Ultra-Blue | <span class="math inline">\(30m\)</span> | <span class="math inline">\(0.43 -0.45\mu m\)</span></li>
+<li>Band 2 Blue | <span class="math inline">\(30m\)</span> | <span class="math inline">\(0.450 - 0.51\mu m\)</span></li>
+<li>Band 3 Green | <span class="math inline">\(30m\)</span> | <span class="math inline">\(0.53 - 0.59\mu m\)</span></li>
+<li>Band 4 Red | <span class="math inline">\(30m\)</span> | <span class="math inline">\(0.64 - 0.67\mu m\)</span></li>
+<li>Band 5 Near-Infrared | <span class="math inline">\(30m\)</span> | <span class="math inline">\(0.85 - 0.88\mu m\)</span></li>
+<li>Band 6 SWIR 1 | <span class="math inline">\(30m\)</span> | <span class="math inline">\(1.57 - 1.655\mu m\)</span></li>
+<li>Band 7 SWIR 2 | <span class="math inline">\(30m\)</span> | <span class="math inline">\(2.11 - 2.29\mu m\)</span></li>
+<li>Band 8 Panchromatic | <span class="math inline">\(15m\)</span> | <span class="math inline">\(0.50 - 0.68\mu m\)</span></li>
+<li>Band 9 Cirrus | <span class="math inline">\(30m\)</span> | <span class="math inline">\(1.36 - 1.38\mu m\)</span></li>
+</ul>
+<p><strong>Thermal Infrared Sensor (TIRS)</strong></p>
+<ul>
+<li>Band 10 TIRS 1 | <span class="math inline">\(100m\)</span> | <span class="math inline">\(10.06 - 11.19\mu m\)</span></li>
+<li>Band 11 TIRS 2 | <span class="math inline">\(100m\)</span> | <span class="math inline">\(11.5 - 12.51\mu m\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>From the ENVI classic Toolbar – File // Open External File // Generic Formats //</p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-source-editor.png" class="img-fluid figure-img" alt="Screenshot of the RStudio IDE with red oval highlighting the Source button."></p>
-<figcaption>RStudio IDE highlighting the Source Editor</figcaption>
+<p><img src="Images/Lab02_Step02_OpenExternal.PNG" class="img-fluid figure-img"></p>
+<figcaption>Open .tiff files</figcaption>
 </figure>
 </div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<blockquote class="blockquote">
+<p>Navigate to the location of the Landsat 8 bands on your computer or on a local drive</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Hold Shift and Select all files, they should all look like this: LC08_L2SP_037035_20210608_20210615_02_T1_SR_B<strong>N</strong>.TIF</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Note: <strong>N</strong> = 1-7</p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-visual-editor.png" class="img-fluid figure-img" alt="Screenshot of the RStudio IDE with red oval highlighting the Visual button."></p>
-<figcaption>RStudio IDE highlighting the Visual Editor</figcaption>
+<p><img src="Images/Lab02_Step02_SelectFiles.PNG" class="img-fluid figure-img"></p>
+<figcaption>Select all files</figcaption>
 </figure>
 </div>
-</div>
-</div>
-</div>
-<p>Already have some content formatted in a Google Doc? You can copy-paste it into the Visual Editor and most formatting will be retained.</p>
-<p>The editing bar provides familiar point and click access to text formatting options like bulleted or numbered lists.</p>
+<blockquote class="blockquote">
+<p>Next you should see a new window pop up containing the available bands, each loaded as a seperate image with 1-Band each, we will combine them into a single image containing 7 bands in step 4 below.</p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-visual-edit-bar.png" class="img-fluid figure-img" alt="RStudio IDE Visual Editor editing bar is highlighted by a red rectangle"></p>
-<figcaption>RStudio IDE highlighting the point and click editing bar</figcaption>
+<p><img src="Images/Lab02_Step02_AvailableBands.PNG" class="img-fluid figure-img"></p>
+<figcaption>Available Bands</figcaption>
 </figure>
 </div>
-<section id="keyboard-shortcuts" class="level4">
-<h4 class="anchored" data-anchor-id="keyboard-shortcuts">Keyboard shortcuts</h4>
-<p>The Visual Editor also lets you use many keyboard shortcuts that might be familiar for adding boldface (command-b), italics (command-i), or headers. On a Mac, option-command-2 will make a level 2 header. Try it with option-command-1, or option-command-0 for normal text!</p>
 </section>
-<section id="insert-an-image-or-figure" class="level4">
-<h4 class="anchored" data-anchor-id="insert-an-image-or-figure">Insert an image or figure</h4>
-<p>To insert an image (called a figure in Quarto), click the image icon. This brings up a window in which we can select the image, set its alignment, give it a caption and alt text, hyperlink it, or edit other metadata.</p>
+<section id="step-3.-calibrate-each-band" class="level2">
+<h2 class="anchored" data-anchor-id="step-3.-calibrate-each-band">Step 3. Calibrate each band</h2>
+<p>We need to calibrate each individual band using the metadata and convert the DN (Digital Number) values to Radiance values. But now is also a good time to look at the meta-data file associated with the bands.</p>
+<blockquote class="blockquote">
+<p>Navigate to the Directory containing your band images in Explorer</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Create a new folder/directory called <strong>Calibrated</strong> … where we will store the calibrated files.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Then select the metadata file <em>LC08_L2SP_037035_20210608_20210615_02_T1_MTL.txt</em> and <em>Open with</em> Notepad</p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-insert-image.png" class="img-fluid figure-img" alt="Pop-up window appears when image icon is clicked"></p>
-<figcaption>Insert image or figure using the Visual Editor</figcaption>
+<p><img src="Images/Lab02_Step03_OpenMetadata.PNG" class="img-fluid figure-img"></p>
+<figcaption>Create Dir - Open Metadata</figcaption>
 </figure>
 </div>
-<p>Once an image is added, clicking on that image gives us editing options. We can resize it dynamically by clicking in the image and dragging a corner or side to resize. When an image is selected, its dimensions are displayed for editing. Clicking on the gray ellipsis to the right of the dimensions opens the pop-up window to access more metadata edits.</p>
+<blockquote class="blockquote">
+<p>Near the bottom of the Meta Data File you will see</p>
+</blockquote>
+<ul>
+<li>MAP_PROJECTION = ‘UTM’ - this is the Universal Tranverse Mercator projection which uses <span class="math inline">\(meters\)</span></li>
+<li>DATUM = ‘WGS84’</li>
+<li>UTM_ZONE = 12</li>
+<li>GRID_CELL_SIZE_REFLECTIVE = 30.00 - (<span class="math inline">\(meters\)</span> because of UTMs)</li>
+</ul>
+<blockquote class="blockquote">
+<p>Now that we have checked the Metadata and everything looks as expected lets <strong>Calibrate the Images</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We will calibrate each image <strong>One-at-a-time</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>From the ENVI classic Toolbar – Select: <em>Basic Tools</em> // <em>PreProcessing</em> // <em>Calibration utilities</em> // <em>Landsat calibration</em></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step03_Calibrate.PNG" class="img-fluid figure-img"></p>
+<figcaption>Landsat Calibration</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Click on the first file and check to make sure it ends in *_B1.TIF*</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step03_SelectB1.PNG" class="img-fluid figure-img"></p>
+<figcaption>Select and Calibrate Band 1</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>rename the file LC08_B1_cal and save it to the <em>~somepath/Calibrated</em> directory</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Click <strong>OK</strong></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step03_SaveCalB1.PNG" class="img-fluid figure-img"></p>
+<figcaption>Save Calibrated band 1</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Repeat with band 2, making sure to click on the the file ending in *_B2.TIF*, rename the file LC08_B2_cal</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Repeat with bands 3 through 7</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When you are finished you Calibrated Directory should contain 14 files:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>LC08_B<strong>N</strong>cal; <strong>N</strong> = 1 - 7 LC08_B<strong>N</strong>cal.hdr; <strong>N</strong> = 1 - 7</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step03_CalDir.PNG" class="img-fluid figure-img"></p>
+<figcaption>Calibrated Directory</figcaption>
+</figure>
+</div>
 </section>
-<section id="insert-a-table" class="level4">
-<h4 class="anchored" data-anchor-id="insert-a-table">Insert a table</h4>
-<p>Similar to adding an image, to insert a table, we click the Table dropdown.</p>
+<section id="step-4.-create-a-layerband-stack" class="level2">
+<h2 class="anchored" data-anchor-id="step-4.-create-a-layerband-stack">Step 4. Create a layer/band stack</h2>
+<p>Now we need to load the calibrated bands into ENVI as a layer stack, or a multi-band image</p>
+<blockquote class="blockquote">
+<p>From the ENVI classic Toolbar – Select <em>Basic Tools</em> // <em>Layer Stacking</em></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step04_select_stack.PNG" class="img-fluid figure-img"></p>
+<figcaption>Select Layer Stacking</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>The Layer Stacking Paremeters window will now open</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Click <em>Import File</em> on the Layer Stacking Parameters window then Navigate to your <em>Calibrated</em> Directory and select the calibrated bands 1 - 7</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step04_LayerStackWindow.PNG" class="img-fluid figure-img"></p>
+<figcaption>Select calibrated files</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Next click <em>Reorder files</em> and move them around so they are 1-7 from top to bottom.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step04_reorder.PNG" class="img-fluid figure-img"></p>
+<figcaption>Reorder Files</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Name the stack **LC08_B1_B7_cal_stack, save it in the <em>Calibrated</em> directory</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Notice on the right side of the Layer Stacking Paramters window that it confirms that the stack is UTM Zone 12, WGS84, and the pixel size is 30 meters.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step04_SaveStack.PNG" class="img-fluid figure-img"></p>
+<figcaption>Save and compile stack</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Click <strong>OK</strong></p>
+</blockquote>
 </section>
+<section id="step-5.-open-stacked-image" class="level2">
+<h2 class="anchored" data-anchor-id="step-5.-open-stacked-image">Step 5. Open Stacked Image</h2>
+<blockquote class="blockquote">
+<p>Now go to your <strong>Avialable Bands List</strong> Window and click Load Band</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A Greyscale image will appear with three windows showing Band 1 (though its really band seven) I know it is confusing which is why in the next step we will reorder and rename the bands in the bands list.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step05_LoadImage.PNG" class="img-fluid figure-img"></p>
+<figcaption>Load Greyscale</figcaption>
+</figure>
+</div>
 </section>
+<section id="step-6.-edit-band-names-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="step-6.-edit-band-names-attributes">Step 6. Edit Band Names Attributes</h2>
+<blockquote class="blockquote">
+<p>From the ENVI classic Toolbar – Select: <em>File</em> // <em>Edit ENVI header</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When the Edit Header Input File window pops up, – Select <em>LC08_B1_B7_cal_stack</em> click <strong>OK</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When the Header Info window pops up, – Select <em>Edit Attributes</em> // <em>Band Names</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When the Edit Band Name values window opens – Select the first Layer. It should be something like: Layer <strong>(TM Cal (Band 1:LC08_L2SP_037035_20210608_20210615_02_T1_SR_B7.TIF):LC08_B7_cal)</strong> replace that with <strong>Band_B7</strong> and hit <strong>Enter</strong> on your keyboard orclick <strong>OK</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Repeat with bands 1-6 ensuring you are correctly naming the bands.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Once completed the Avilable Bands List window should show the new names and they should be in order 1-7 from top to bottom</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step06_NewBandNames.PNG" class="img-fluid figure-img"></p>
+<figcaption>New band names</figcaption>
+</figure>
+</div>
 </section>
-<section id="quarto-render" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-render">Quarto render</h2>
-<p>In the Build tab in the top-right pane, click “Render Website”. This will build the .html files and preview your website. It’s equivalent to “knitting” in RMarkdown.</p>
-<p>Note that you can also click “Preview Website”. With “Render Website” in RStudio, Quarto is able to render and preview in one step.</p>
-<p>If you’d ever like to stop the preview, in the bottom-left, click on the Jobs tab and then the red Stop button.</p>
-<section id="make-a-small-change-and-render-it" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-small-change-and-render-it">Make a small change and render it</h3>
-<p>Click on <code>index.md</code>. This will open this markdown file in a fourth pane; the editor pane. Make a small change, for example change to today’s date on Line 4. Then, save your file; there is a disc icon at the top of the file.</p>
-<p>Then, render this file: press “Render” which is to the right of the disc icon that saves the file. This will render only this single file, as opposed to rerendering the whole website like when we clicked “Render Website” in the top right pane. Checking <strong>Render on Save</strong> (between the disc icon and the Render button) is a great strategy for doing this in one step.</p>
+<section id="step-7.-edit-band-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="step-7.-edit-band-attributes">Step 7. Edit Band Attributes</h2>
+<p>Next we will edit the attributes and change the units to wavelength and select the mean wavelength for each landsat band.</p>
+<ul>
+<li>Band 1 = mean(c(0.43,0.45)) = <span class="math inline">\(0.44\mu m\)</span></li>
+<li>Band 2 = mean(c(0.45,0.51)) = <span class="math inline">\(0.48\mu m\)</span></li>
+<li>Band 3 = mean(c(0.53,0.59)) = <span class="math inline">\(0.56\mu m\)</span></li>
+<li>Band 4 = mean(c(0.64,0.67)) = <span class="math inline">\(0.655\mu m\)</span></li>
+<li>Band 5 = mean(c(0.85,0.88)) = <span class="math inline">\(0.865\mu m\)</span></li>
+<li>Band 6 = mean(c(1.57,1.655)) = <span class="math inline">\(1.6125\mu m\)</span></li>
+<li>Band 7 = mean(c(2.11,2.29)) = <span class="math inline">\(2.2\mu m\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>From the ENVI classic Toolbar – Select: <em>File</em> // <em>Edit ENVI header</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When the Edit Header Input File window pops up, – Select <em>LC08_B1_B7_cal_stack</em> click <strong>OK</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>When the Header Info window pops up, – Select <em>Edit Attributes</em> // <em>Wavelengths</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In the <em>Edit Wavelength Values</em> window – Select <em>Band:1 :0.0000</em> and input the number for Band 1 from above (0.44) which is the mean wavelength or midpoint in the range of values for that band</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Make sure to select Micrometers from the Wavelength/FWHM Units dropdown</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step07_wavelenthB1_044.PNG" class="img-fluid figure-img"></p>
+<figcaption>Edit Wavelength Values</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Repeat with other 7 bands using values from above and click <strong>OK</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>when you are finished it should look like this:</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step07_finished.PNG" class="img-fluid figure-img"></p>
+<figcaption>Finsihed step 7</figcaption>
+</figure>
+</div>
 </section>
+<section id="step-8.-explore-the-image" class="level2">
+<h2 class="anchored" data-anchor-id="step-8.-explore-the-image">Step 8. Explore the Image</h2>
+<blockquote class="blockquote">
+<p>In the Available Bands List window, toggle from Gray Scale to RGB Color and Click Load RGB selecting Band_4 for R or Red, Band_3 for G or Green and Band_2 for B or Blue</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Three display windows should now pop up and be displaying the image in True Color RGB</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Click on the largest window and scroll to some spot on the map with your cursor right-click and select <em>Cursor Location/Value</em> and watch as the Data values for RG &amp; B change as our scroll across the map.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step08_RGB.PNG" class="img-fluid figure-img"></p>
+<figcaption>Cursor Location/Value</figcaption>
+</figure>
+</div>
 </section>
-<section id="create-a-new-.rmd-page" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-new-.rmd-page">Create a new <code>.Rmd</code> page</h2>
-<p>New &gt; RMarkdown document &gt; OK</p>
-<p>The starter RMarkdown document has some R code inside: it displays a summary of the cars dataset that is pre-loaded into R (<code>summary(cars)</code>) and plots the pressure data that is also pre-loaded (<code>plot(pressure)</code>).</p>
-<p>Save this document as <code>r-example.rmd</code>.</p>
-</section>
-<section id="update-_quarto.yml" class="level2">
-<h2 class="anchored" data-anchor-id="update-_quarto.yml">Update <code>_quarto.yml</code></h2>
-<p>Now we’ll add <code>r-example.rmd</code> to our <code>_quarto.yml</code> file; this is where we register all files to include in our site. Let’s add it after the section called “Quarto Workflows”.</p>
-<p>Open <code>_quarto.yml</code> by clicking on it from the file directory.</p>
-<p>Scroll down to review the current contents in the <code>sidebar:</code> section under <code>contents:</code>. It’s there we see all the file arrangement that we see in the previewed site.</p>
-<p>Add <code>- r-example.rmd</code> in its own line, making sure that your indentation aligns with the other pages.</p>
-<p>From the Build tab, clicking Preview Website will recreate your website!</p>
-</section>
-<section id="authoring-tips" class="level2">
-<h2 class="anchored" data-anchor-id="authoring-tips">Authoring tips</h2>
-<p>Checking “Render on Save” is really helpful when iterating quickly on a document.</p>
-<p>If the document is very code-heavy, consider using <a href="https://quarto.org/docs/projects/code-execution.html#freeze"><code>freeze</code></a> that will not run the code each time.</p>
-<p><a href="https://quarto.org/">Quarto.org</a> has details about authoring, including specific instructions about <a href="https://quarto.org/docs/get-started/authoring/rstudio.html">authoring in RStudio</a>.</p>
-</section>
-<section id="commit-and-push" class="level2">
-<h2 class="anchored" data-anchor-id="commit-and-push">Commit and push!</h2>
-<p>Committing and pushing will make the changes you see locally live on your website (using the <a href="../explore.qmd#setup-github-action">GitHub Action we set up earlier</a>).</p>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>If you have trouble rendering your website after for example changing the extenstion of a file from <code>.md</code> to <code>.qmd</code>, refreshing your RStudio often helps. Do this by clicking the project name at the upper right of the RStudio window (in this case, <code>quarto-website-tutorial</code>), and underneath the “close project” section, click the same name of your project: <code>quarto-website-tutorial</code>. This will relaunch your whole project afresh.</p>
+<section id="step-9.-display-different-band-combinations" class="level2">
+<h2 class="anchored" data-anchor-id="step-9.-display-different-band-combinations">Step 9. Display different band combinations</h2>
+<blockquote class="blockquote">
+<p>Have a look at some <a href="[Common Landsat Band Combinations](https://www.usgs.gov/media/images/common-landsat-band-combinations)">common band combinations</a> used for RGB color display.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Lab02_Step09_bandcombos.PNG" class="img-fluid figure-img"></p>
+<figcaption>Popular Band Combinations</figcaption>
+</figure>
+</div>
+<p><strong>At a minimum try:</strong></p>
+<blockquote class="blockquote">
+<p><strong>Color Infrared (CIR)</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>using bands 5,4 &amp; 3 for RG &amp; B respectively</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>False Color (Vegetation Analysis)</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>using bands 6,5 &amp; 4 for RG &amp; B respectively</p>
+</blockquote>
 
 
 </section>
@@ -887,6 +1123,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Lab-Exercises/index.html" class="pagination-link" aria-label="Lab Exercises">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab Exercises</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -895,7 +1140,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/edit/main/quarto-workflows/rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/edit/main/Lab-Exercises/Lab-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Ryan3Lima/AppliedRemoteSensingNAU/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
