@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/transition-from-rmarkdown.html</loc>
-    <lastmod>2023-08-17T20:35:09.661Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/transition-from-rmarkdown.html</loc>
+    <lastmod>2024-09-05T19:50:05.083Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/index.html</loc>
-    <lastmod>2023-12-18T21:37:44.101Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/jupyter.html</loc>
+    <lastmod>2024-09-05T19:50:05.082Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/learning-more.html</loc>
-    <lastmod>2023-08-17T20:35:10.368Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/browser.html</loc>
+    <lastmod>2024-09-05T19:50:05.048Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/explore.html</loc>
-    <lastmod>2024-01-04T21:02:10.127Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/learning-more.html</loc>
+    <lastmod>2024-09-05T19:50:05.048Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/browser.html</loc>
-    <lastmod>2023-08-17T20:35:11.180Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/index.html</loc>
+    <lastmod>2024-09-05T20:08:50.577Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/jupyter.html</loc>
-    <lastmod>2023-08-17T20:35:11.606Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-2.html</loc>
+    <lastmod>2024-09-05T23:00:21.131Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/index.html</loc>
-    <lastmod>2023-08-17T20:35:11.959Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/index.html</loc>
+    <lastmod>2024-09-05T19:50:05.082Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/rstudio.html</loc>
-    <lastmod>2023-08-17T20:35:12.367Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/rstudio.html</loc>
+    <lastmod>2024-09-05T19:50:05.082Z</lastmod>
   </url>
 </urlset>
