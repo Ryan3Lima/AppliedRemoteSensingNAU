@@ -1,2 +1,2 @@
-# quarto-site-template
-Example quarto site without R or Python!
+# Applied Remote Sensing at NAU
+Example quarto site 
