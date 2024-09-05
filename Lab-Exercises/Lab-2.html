@@ -228,15 +228,14 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Click on <em>ENVI Classic 6.0</em></p>
 </blockquote>
-<blockquote class="blockquote">
 <p>ENVI Classic will Start up and you will see a toolbar</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step01_ENVIclassic_bar.PNG" class="img-fluid figure-img"></p>
 <figcaption>ENVI Classic toolbar</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-2.-load-landsat-8-bands" class="level2">
 <h2 class="anchored" data-anchor-id="step-2.-load-landsat-8-bands">Step 2. Load Landsat 8 Bands</h2>
@@ -268,30 +267,25 @@ window.Quarto = {
 <figcaption>Open .tiff files</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
 <p>Navigate to the location of the Landsat 8 bands on your computer or on a local drive</p>
-</blockquote>
 <blockquote class="blockquote">
 <p>Hold Shift and Select all files, they should all look like this: LC08_L2SP_037035_20210608_20210615_02_T1_SR_B<strong>N</strong>.TIF</p>
 </blockquote>
-<blockquote class="blockquote">
 <p>Note: <strong>N</strong> = 1-7</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step02_SelectFiles.PNG" class="img-fluid figure-img"></p>
 <figcaption>Select all files</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
 <p>Next you should see a new window pop up containing the available bands, each loaded as a seperate image with 1-Band each, we will combine them into a single image containing 7 bands in step 4 below.</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step02_AvailableBands.PNG" class="img-fluid figure-img"></p>
 <figcaption>Available Bands</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-3.-calibrate-each-band" class="level2">
 <h2 class="anchored" data-anchor-id="step-3.-calibrate-each-band">Step 3. Calibrate each band</h2>
@@ -303,7 +297,7 @@ window.Quarto = {
 <p>Create a new folder/directory called <strong>Calibrated</strong> … where we will store the calibrated files.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>Then select the metadata file <em>LC08_L2SP_037035_20210608_20210615_02_T1_MTL.txt</em> and <em>Open with</em> Notepad</p>
+<p>– Select the metadata file <em>LC08_L2SP_037035_20210608_20210615_02_T1_MTL.txt</em> and <em>Open with</em> Notepad</p>
 </blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -311,21 +305,14 @@ window.Quarto = {
 <figcaption>Create Dir - Open Metadata</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
 <p>Near the bottom of the Meta Data File you will see</p>
-</blockquote>
 <ul>
 <li>MAP_PROJECTION = ‘UTM’ - this is the Universal Tranverse Mercator projection which uses <span class="math inline">\(meters\)</span></li>
 <li>DATUM = ‘WGS84’</li>
 <li>UTM_ZONE = 12</li>
 <li>GRID_CELL_SIZE_REFLECTIVE = 30.00 - (<span class="math inline">\(meters\)</span> because of UTMs)</li>
 </ul>
-<blockquote class="blockquote">
-<p>Now that we have checked the Metadata and everything looks as expected lets <strong>Calibrate the Images</strong></p>
-</blockquote>
-<blockquote class="blockquote">
-<p>We will calibrate each image <strong>One-at-a-time</strong></p>
-</blockquote>
+<p>Now that we have checked the Metadata and everything looks as expected lets <strong>Calibrate the Images</strong>. We will calibrate each image <strong>One-at-a-time</strong></p>
 <blockquote class="blockquote">
 <p>From the ENVI classic Toolbar – Select: <em>Basic Tools</em> // <em>PreProcessing</em> // <em>Calibration utilities</em> // <em>Landsat calibration</em></p>
 </blockquote>
@@ -362,18 +349,15 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Repeat with bands 3 through 7</p>
 </blockquote>
-<blockquote class="blockquote">
 <p>When you are finished you Calibrated Directory should contain 14 files:</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>LC08_B<strong>N</strong>cal; <strong>N</strong> = 1 - 7 LC08_B<strong>N</strong>cal.hdr; <strong>N</strong> = 1 - 7</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step03_CalDir.PNG" class="img-fluid figure-img"></p>
 <figcaption>Calibrated Directory</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-4.-create-a-layerband-stack" class="level2">
 <h2 class="anchored" data-anchor-id="step-4.-create-a-layerband-stack">Step 4. Create a layer/band stack</h2>
@@ -387,9 +371,7 @@ window.Quarto = {
 <figcaption>Select Layer Stacking</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
 <p>The Layer Stacking Paremeters window will now open</p>
-</blockquote>
 <blockquote class="blockquote">
 <p>Click <em>Import File</em> on the Layer Stacking Parameters window then Navigate to your <em>Calibrated</em> Directory and select the calibrated bands 1 - 7</p>
 </blockquote>
@@ -411,9 +393,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Name the stack **LC08_B1_B7_cal_stack, save it in the <em>Calibrated</em> directory</p>
 </blockquote>
-<blockquote class="blockquote">
 <p>Notice on the right side of the Layer Stacking Paramters window that it confirms that the stack is UTM Zone 12, WGS84, and the pixel size is 30 meters.</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step04_SaveStack.PNG" class="img-fluid figure-img"></p>
@@ -423,21 +403,21 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Click <strong>OK</strong></p>
 </blockquote>
+<hr>
 </section>
 <section id="step-5.-open-stacked-image" class="level2">
 <h2 class="anchored" data-anchor-id="step-5.-open-stacked-image">Step 5. Open Stacked Image</h2>
 <blockquote class="blockquote">
 <p>Now go to your <strong>Avialable Bands List</strong> Window and click Load Band</p>
 </blockquote>
-<blockquote class="blockquote">
 <p>A Greyscale image will appear with three windows showing Band 1 (though its really band seven) I know it is confusing which is why in the next step we will reorder and rename the bands in the bands list.</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Images/Lab02_Step05_LoadImage.PNG" class="img-fluid figure-img"></p>
 <figcaption>Load Greyscale</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-6.-edit-band-names-attributes" class="level2">
 <h2 class="anchored" data-anchor-id="step-6.-edit-band-names-attributes">Step 6. Edit Band Names Attributes</h2>
@@ -465,6 +445,7 @@ window.Quarto = {
 <figcaption>New band names</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-7.-edit-band-attributes" class="level2">
 <h2 class="anchored" data-anchor-id="step-7.-edit-band-attributes">Step 7. Edit Band Attributes</h2>
@@ -511,15 +492,14 @@ window.Quarto = {
 <figcaption>Finsihed step 7</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-8.-explore-the-image" class="level2">
 <h2 class="anchored" data-anchor-id="step-8.-explore-the-image">Step 8. Explore the Image</h2>
 <blockquote class="blockquote">
 <p>In the Available Bands List window, toggle from Gray Scale to RGB Color and Click Load RGB selecting Band_4 for R or Red, Band_3 for G or Green and Band_2 for B or Blue</p>
 </blockquote>
-<blockquote class="blockquote">
 <p>Three display windows should now pop up and be displaying the image in True Color RGB</p>
-</blockquote>
 <blockquote class="blockquote">
 <p>Click on the largest window and scroll to some spot on the map with your cursor right-click and select <em>Cursor Location/Value</em> and watch as the Data values for RG &amp; B change as our scroll across the map.</p>
 </blockquote>
@@ -529,6 +509,7 @@ window.Quarto = {
 <figcaption>Cursor Location/Value</figcaption>
 </figure>
 </div>
+<hr>
 </section>
 <section id="step-9.-display-different-band-combinations" class="level2">
 <h2 class="anchored" data-anchor-id="step-9.-display-different-band-combinations">Step 9. Display different band combinations</h2>
@@ -543,16 +524,10 @@ window.Quarto = {
 </div>
 <p><strong>At a minimum try:</strong></p>
 <blockquote class="blockquote">
-<p><strong>Color Infrared (CIR)</strong></p>
+<p><strong>Color Infrared (CIR)</strong> using bands 5,4 &amp; 3 for RG &amp; B respectively</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>using bands 5,4 &amp; 3 for RG &amp; B respectively</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>False Color (Vegetation Analysis)</strong></p>
-</blockquote>
-<blockquote class="blockquote">
-<p>using bands 6,5 &amp; 4 for RG &amp; B respectively</p>
+<p><strong>False Color (Vegetation Analysis)</strong> using bands 6,5 &amp; 4 for RG &amp; B respectively</p>
 </blockquote>
 
 
