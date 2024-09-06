@@ -184,6 +184,17 @@
     ]
   },
   {
+    "objectID": "Lab-Exercises/Lab-2.html#about-landsat-8",
+    "href": "Lab-Exercises/Lab-2.html#about-landsat-8",
+    "title": "Lab 2 - Getting your image ready for classification",
+    "section": "About Landsat 8",
+    "text": "About Landsat 8\nFrom the NASA.gov Landsat 8 Information Page:\n\nLandsat 8 launched on February 11, 2013, from Vandenberg Air Force Base, California, on an Atlas-V 401 rocket, with the extended payload fairing  (EPF) from United Launch Alliance, LLC. (The Landsat 8 Launch in Quotes.) The Landsat 8 satellite payload consists of two science instruments—the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS). These two sensors provide seasonal coverage of the global landmass at a spatial resolution of 30 meters (visible, NIR, SWIR); 100 meters (thermal); and 15 meters (panchromatic). Landsat 8 was developed as a collaboration between NASA and the U.S. Geological Survey (USGS). NASA led the design, construction, launch, and on-orbit calibration phases, during which time the satellite was called the Landsat Data Continuity Mission (LDCM). On May 30, 2013, USGS took over routine operations and the satellite became Landsat 8. USGS leads post-launch calibration activities, satellite operations, data product generation, and data archiving at the Earth Resources Observation and Science (EROS) center.\n\n\nQuick Facts\n\n\n\nLaunch Date: February 11, 2013\nSensors: OLI, TIRS\nAltitude: 705km\nInclination: \\(98\\textdegree\\)\nOrbit: Polar, sun-synchronous\nEquitorial Crossing Time: Nominally 10AM (+/- 15 minutes) local time (descending node)\nPeriod of Revolution: 99 minutes; ~14.5 orbits/day\nRepeat Coverage: 16 days\nData: 12-bit scaled to 16-bit intergers\n\n\n\n\n\nSource:https://landsat.gsfc.nasa.gov/satellites/landsat-8/: The OLI collects data for two new bands, a coastal/aerosol band (band 1) and a cirrus band (band 9), as well as the heritage Landsat multispectral bands. Additionally, the bandwidth has been refined for six of the heritage bands. The Thermal Instrument (TIRS) carries two additional thermal infrared bands. Note: atmospheric transmission values for this graphic were calculated using MODTRAN for a summertime mid-latitude hazy atmosphere (circa 5 km visibility).Graphic created by L.Rocchio & J.Barsi.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab 2 - Getting your image ready for classification"
+    ]
+  },
+  {
     "objectID": "Lab-Exercises/Lab-2.html#step-1.-start-envi-classic",
     "href": "Lab-Exercises/Lab-2.html#step-1.-start-envi-classic",
     "title": "Lab 2 - Getting your image ready for classification",
@@ -372,16 +383,5 @@
     "title": "From RStudio",
     "section": "Troubleshooting",
     "text": "Troubleshooting\nIf you have trouble rendering your website after for example changing the extenstion of a file from .md to .qmd, refreshing your RStudio often helps. Do this by clicking the project name at the upper right of the RStudio window (in this case, quarto-website-tutorial), and underneath the “close project” section, click the same name of your project: quarto-website-tutorial. This will relaunch your whole project afresh."
-  },
-  {
-    "objectID": "Lab-Exercises/Lab-2.html#about-landsat-8",
-    "href": "Lab-Exercises/Lab-2.html#about-landsat-8",
-    "title": "Lab 2 - Getting your image ready for classification",
-    "section": "About Landsat 8",
-    "text": "About Landsat 8\nFrom the NASA.gov Landsat 8 Information Page:\n\nLandsat 8 launched on February 11, 2013, from Vandenberg Air Force Base, California, on an Atlas-V 401 rocket, with the extended payload fairing  (EPF) from United Launch Alliance, LLC. (The Landsat 8 Launch in Quotes.) The Landsat 8 satellite payload consists of two science instruments—the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS). These two sensors provide seasonal coverage of the global landmass at a spatial resolution of 30 meters (visible, NIR, SWIR); 100 meters (thermal); and 15 meters (panchromatic). Landsat 8 was developed as a collaboration between NASA and the U.S. Geological Survey (USGS). NASA led the design, construction, launch, and on-orbit calibration phases, during which time the satellite was called the Landsat Data Continuity Mission (LDCM). On May 30, 2013, USGS took over routine operations and the satellite became Landsat 8. USGS leads post-launch calibration activities, satellite operations, data product generation, and data archiving at the Earth Resources Observation and Science (EROS) center.\n\n\nQuick Facts\n\n\n\nLaunch Date: February 11, 2013\nSensors: OLI, TIRS\nAltitude: 705km\nInclination: \\(98\\textdegree\\)\nOrbit: Polar, sun-synchronous\nEquitorial Crossing Time: Nominally 10AM (+/- 15 minutes) local time (descending node)\nPeriod of Revolution: 99 minutes; ~14.5 orbits/day\nRepeat Coverage: 16 days\nData: 12-bit scaled to 16-bit intergers\n\n\n\n\n\nSource:https://landsat.gsfc.nasa.gov/satellites/landsat-8/: The OLI collects data for two new bands, a coastal/aerosol band (band 1) and a cirrus band (band 9), as well as the heritage Landsat multispectral bands. Additionally, the bandwidth has been refined for six of the heritage bands. The Thermal Instrument (TIRS) carries two additional thermal infrared bands. Note: atmospheric transmission values for this graphic were calculated using MODTRAN for a summertime mid-latitude hazy atmosphere (circa 5 km visibility).Graphic created by L.Rocchio & J.Barsi.",
-    "crumbs": [
-      "Lab Exercises",
-      "Lab 2 - Getting your image ready for classification"
-    ]
   }
 ]
