@@ -119,57 +119,157 @@
     "text": "Limitations\nWhile awesome that we can edit using GitHub directly from the browser, there are obvious limitations. One is that to see your edits show up in your book, you have to publish using the GitHub Action. This is slow. Another limitation is that we can only work on one file at a time and commit them each separately, which also is slow. Using additional software can make things much better, as we explore in subsequent chapters."
   },
   {
-    "objectID": "learning-more.html",
-    "href": "learning-more.html",
-    "title": "Learning more",
-    "section": "",
-    "text": "An excellent overview: Reproducible authoring with Quarto - Mine Çetinkaya-Rundel, Feb 2022 - slides, youtube\nA Quarto tip a day in June 2022, from Mine Çetinkaya-Rundel.\n\n\n\nOpenscapes Champions Lessons Series\nOpenscapes Approach Guide\n\nNASA Earthdata Cloud Cookbook\n\nSee many more examples at the quarto gallery!\n\n\n\nAre you making onboarding documentation? Check out The Fay Lab Manual (now in Quarto!) for inspiration on structure - you could also start there and make it your own."
-  },
-  {
-    "objectID": "learning-more.html#learn-more",
-    "href": "learning-more.html#learn-more",
-    "title": "Learning more",
-    "section": "",
-    "text": "An excellent overview: Reproducible authoring with Quarto - Mine Çetinkaya-Rundel, Feb 2022 - slides, youtube\nA Quarto tip a day in June 2022, from Mine Çetinkaya-Rundel.\n\n\n\nOpenscapes Champions Lessons Series\nOpenscapes Approach Guide\n\nNASA Earthdata Cloud Cookbook\n\nSee many more examples at the quarto gallery!\n\n\n\nAre you making onboarding documentation? Check out The Fay Lab Manual (now in Quarto!) for inspiration on structure - you could also start there and make it your own."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Applied Remote Sensing",
-    "section": "",
-    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#introduction",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#introduction",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Introduction",
+    "text": "Introduction",
     "crumbs": [
-      "Welcome"
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
     ]
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Applied Remote Sensing",
-    "section": "",
-    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Resources and Sources",
+    "text": "Resources and Sources\n\nData in Harmony: NASA’s Harmonized Landsat and Sentinel-2 Project\nHLS Overview - NASA Earth Data - LPDAAC\nHarmonized Landsat Sentinel-2 (HLS) Product User Guide\nHLS Data Resources",
     "crumbs": [
-      "Welcome"
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
     ]
   },
   {
-    "objectID": "index.html#what-is-remote-sensing",
-    "href": "index.html#what-is-remote-sensing",
-    "title": "Applied Remote Sensing",
-    "section": "What is Remote sensing?",
-    "text": "What is Remote sensing?\nRemote sensing is the process of acquiring information about the Earth’s surface without direct physical contact, typically through the use of satellites, drones, or aircraft. It involves capturing data across various wavelengths of the electromagnetic spectrum, such as visible light, infrared, microwave, or ultraviolet, using sensors or cameras mounted on these platforms.",
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources-continued",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources-continued",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Resources and Sources continued",
+    "text": "Resources and Sources continued\n\nHLS Python Tutorial\nHLS R Tutorial",
     "crumbs": [
-      "Welcome"
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
     ]
   },
   {
-    "objectID": "index.html#applications-of-remote-sensing",
-    "href": "index.html#applications-of-remote-sensing",
-    "title": "Applied Remote Sensing",
-    "section": "Applications of Remote Sensing:",
-    "text": "Applications of Remote Sensing:\n\nEnvironmental Monitoring: Tracking changes in land use, deforestation, desertification, and urbanization.\nAgriculture: Monitoring crop health, soil moisture, and yield prediction.\nWater Resources: Measuring surface water levels, mapping wetlands, and tracking snow cover.\nDisaster Management: Assessing the impact of natural disasters like floods, hurricanes, and wildfires.\nClimate Studies: Monitoring glaciers, sea level rise, and temperature changes.\nGeology: Identifying mineral deposits, faults, and mapping landforms.",
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#harmonized-landsat-and-sentinel-2-hls",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#harmonized-landsat-and-sentinel-2-hls",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Harmonized Landsat and Sentinel-2 (HLS)",
+    "text": "Harmonized Landsat and Sentinel-2 (HLS)\n\nseamless surface reflectance records from the operational land imager (OLD) aboard Landsat 8/9 and the multi-spectral instrument (MSI) aboard sentinal 2A/B\nHLS Version 2.0 available with global coverage (except Antartica)\n3-day return at equator, more frequent at higher latitutdes\n\nThe combined measurement enables global observations of the land every 2–3 days at 30 meter (m) spatial resolution. The HLSS30 and HLSL30 products are gridded to the same resolution and Military Grid Reference System (MGRS) tiling and are “stackable” for time series analysis.",
     "crumbs": [
-      "Welcome"
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "HLS",
+    "text": "HLS\nAdvantages of HLS\n\n\nIncreased temporal frequency\nCommon gridding\nUnified atmospheric correction\nIllumination & view angle normalization\nSpectral bandpass adjustment",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#potential-applications",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#potential-applications",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Potential Applications",
+    "text": "Potential Applications\n\n\nActive Fires\nSnow Extent\nAgriculture\nInland flooding\nUrban Applications",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#naming-conventions",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#naming-conventions",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Naming Conventions",
+    "text": "Naming Conventions\nIn this example of a swath product, the filename HLS.S30.T60HTE.2022103T222539.v2.0.B01.tif indicates:\n\n\nHLS.S30 – Product Short Name\nT60HTE – MGRS Tile ID (T+5-digits)\n2022103 – Julian Date of Acquisition (YYYYDDD)\nT222539– Time of Acquisition (HHMMSS)\nv2.0 – Collection Version\nB01 – Spectral Band, Angle Band or QA(Fmask)\ntif – Data Format (Cloud Optimized GeoTiff)",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#tiling-system",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#tiling-system",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Tiling System",
+    "text": "Tiling System\nThe HLS tiling system is identical to the one used for Sentinel-2. The tiles’ dimensions are 109.8 km squares with an overlap of 4,900 m on each side. The system is aligned with the Military Grid Reference System (MGRS), and its naming convention is derived from the UTM (Universal Transverse Mercator) system. The UTM system divides the Earth’s surface into 60 vertical zones. Each UTM zone has a vertical width of 6° of longitude and horizontal width of 8° of latitude, as shown in the map below. Each UTM zone is subdivided into MGRS 110 x 110 km zones.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-1",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-1",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "HLS Data Processing 1",
+    "text": "HLS Data Processing 1\n\n\nHLS uses a processing chain involving several separate radiometric and geometric adjustments, with a goal of eliminating differences in retrieved surface reflectance arising solely from differences in instrumentation.\nInput data products from Landsat 8/9 (Collection 2 Level 1T top-of-atmosphere reflectance or top-of-atmosphere apparent temperature) and Sentinel-2 (L1C top-of-atmosphere reflectance) are ingested for HLS processing.\nA series of radiometric and geometric corrections are applied to convert data to surface reflectance, adjust for BRDF differences, and adjust for spectral bandpass differences.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-2",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-2",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "HLS Data Processing 2",
+    "text": "HLS Data Processing 2\nThree types of products are then generated:\n1. S10 products – atmospherically corrected Sentinel-2 images in their native resolution and geometry;\nThe harmonized products\n2. HLSS30\n3. HLSL30\n\nThese products have been radiometrically harmonized to the maximum extent and then gridded to a common 30-meter UTM basis using the Sentinel-2 tile system.\n\n\nNote: that S10 products are not normally archived. The S30 and L30 products are resampled as needed to a common 30-meter resolution UTM projection and tiled using the Sentinel-2 Military Grid Reference System (MGRS) UTM grid.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-3",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-3",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "HLS Data Processing 3",
+    "text": "HLS Data Processing 3\n\nLP DAAC distributes both the L30 and S30 products:\nS30: MSI harmonized surface reflectance resampled to 30 m into the Sentinel-2 tiling system and adjusted to Landsat 8/9 spectral response function.\nL30: OLI harmonized surface reflectance and Top-of-Atmosphere (TOA) brightness temperature resampled to 30 m into the Sentinel-2 tiling system.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#temporal-coverage",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#temporal-coverage",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Temporal Coverage",
+    "text": "Temporal Coverage\n\n\n\nData Source\nHLS Start Date\n\n\n\n\nLandsat-8\n2013-04-11\n\n\nSentinel-2A\n2015-11-30\n\n\nSentinel-2B\n2017-07-05\n\n\nLandsat-9\n2021-10-31",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#spectral-bands",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#spectral-bands",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Spectral bands",
+    "text": "Spectral bands\n\n\n\n\n\n\n\n\n\n\n\n\nHLS Band Code Name L30\nHLS Band Code Name S30\nOLI Band Number\nMSI Band Number\nWavelength (micrometers)\nMidpoint Wavelength\nBand\n\n\n\n\nband01\nB01\n1\n1\n0.43 – 0.45\n0.44\nCoastal Aerosol\n\n\nband02\nB02\n2\n2\n0.45 – 0.51\n0.48\nBlue\n\n\nband03\nB03\n3\n3\n0.53 – 0.59\n0.56\nGreen\n\n\nband04\nB04\n4\n4\n0.64 – 0.67\n0.655\nRed\n\n\n-\nB05\n-\n5\n0.69 – 0.71\n0.7\nRed-Edge 1\n\n\n-\nB06\n-\n6\n0.73 – 0.75\n0.74\nRed-Edge 2\n\n\n-\nB07\n-\n7\n0.77 – 0.79\n0.79\nRed-Edge 3\n\n\n-\nB08\n-\n8\n0.78 – 0.88\n0.83\nNIR Broad\n\n\nband05\nB8A\n5\n8A\n0.85 – 0.88\n0.865\nNIR Narrow\n\n\nband06\nB11\n6\n11\n1.57 – 1.65\n1.61\nSWIR 1\n\n\nband07\nB12\n7\n12\n2.11 – 2.29\n2.2\nSWIR 2\n\n\n-\nB09\n-\n9\n0.93 – 0.95\n0.94\nWater Vapor\n\n\nband09\nB10\n9\n10\n1.36 – 1.38\n1.37\nCirrus\n\n\nband10\n-\n10\n-\n10.60 – 11.19\n10.895\nThermal Infrared 1\n\n\nband11\n-\n11\n-\n11.50 – 12.51\n12.005\nThermal Infrared 2",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#note-known-issues",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#note-known-issues",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Note: Known Issues",
+    "text": "Note: Known Issues\nThe list of HLS v2.0 Data Known Issues is maintained at LP DAAC\nAlthough HLS does not use the Landsat Collection-2 surface reflectance data directly, it uses an atmospheric correction code that is similar to the one used to produce the Landssat Collection-2 surface reflectance data. Therefore, the HLS surface reflectance shares the same problems present in Collection-2; see the heading “Surface Reflectance Issues” at landsat-collection-2-known-issues.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
     ]
   },
   {
@@ -292,6 +392,60 @@
       "Lab Exercises",
       "Lab 2 - Getting your image ready for classification"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Applied Remote Sensing",
+    "section": "",
+    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Applied Remote Sensing",
+    "section": "",
+    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-remote-sensing",
+    "href": "index.html#what-is-remote-sensing",
+    "title": "Applied Remote Sensing",
+    "section": "What is Remote sensing?",
+    "text": "What is Remote sensing?\nRemote sensing is the process of acquiring information about the Earth’s surface without direct physical contact, typically through the use of satellites, drones, or aircraft. It involves capturing data across various wavelengths of the electromagnetic spectrum, such as visible light, infrared, microwave, or ultraviolet, using sensors or cameras mounted on these platforms.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#applications-of-remote-sensing",
+    "href": "index.html#applications-of-remote-sensing",
+    "title": "Applied Remote Sensing",
+    "section": "Applications of Remote Sensing:",
+    "text": "Applications of Remote Sensing:\n\nEnvironmental Monitoring: Tracking changes in land use, deforestation, desertification, and urbanization.\nAgriculture: Monitoring crop health, soil moisture, and yield prediction.\nWater Resources: Measuring surface water levels, mapping wetlands, and tracking snow cover.\nDisaster Management: Assessing the impact of natural disasters like floods, hurricanes, and wildfires.\nClimate Studies: Monitoring glaciers, sea level rise, and temperature changes.\nGeology: Identifying mineral deposits, faults, and mapping landforms.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "learning-more.html",
+    "href": "learning-more.html",
+    "title": "Learning more",
+    "section": "",
+    "text": "An excellent overview: Reproducible authoring with Quarto - Mine Çetinkaya-Rundel, Feb 2022 - slides, youtube\nA Quarto tip a day in June 2022, from Mine Çetinkaya-Rundel.\n\n\n\nOpenscapes Champions Lessons Series\nOpenscapes Approach Guide\n\nNASA Earthdata Cloud Cookbook\n\nSee many more examples at the quarto gallery!\n\n\n\nAre you making onboarding documentation? Check out The Fay Lab Manual (now in Quarto!) for inspiration on structure - you could also start there and make it your own."
+  },
+  {
+    "objectID": "learning-more.html#learn-more",
+    "href": "learning-more.html#learn-more",
+    "title": "Learning more",
+    "section": "",
+    "text": "An excellent overview: Reproducible authoring with Quarto - Mine Çetinkaya-Rundel, Feb 2022 - slides, youtube\nA Quarto tip a day in June 2022, from Mine Çetinkaya-Rundel.\n\n\n\nOpenscapes Champions Lessons Series\nOpenscapes Approach Guide\n\nNASA Earthdata Cloud Cookbook\n\nSee many more examples at the quarto gallery!\n\n\n\nAre you making onboarding documentation? Check out The Fay Lab Manual (now in Quarto!) for inspiration on structure - you could also start there and make it your own."
   },
   {
     "objectID": "quarto-workflows/index.html",

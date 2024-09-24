@@ -33,6 +33,7 @@ website:
         text: Welcome
       - section: Lectures/index.qmd
         contents: 
+          - Lectures/HLS_Harmonized_landsat_and_Sentinal.qmd
       - section: Lab-Exercises/index.qmd
         contents: 
           - Lab-Exercises/Lab-2.qmd
