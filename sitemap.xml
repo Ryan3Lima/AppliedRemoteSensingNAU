@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/transition-from-rmarkdown.html</loc>
-    <lastmod>2024-09-24T22:08:05.105Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.035Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/jupyter.html</loc>
-    <lastmod>2024-09-24T22:08:05.105Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.035Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/rstudio.html</loc>
-    <lastmod>2024-09-24T22:08:05.105Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.035Z</lastmod>
   </url>
   <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-2.html</loc>
-    <lastmod>2024-09-24T22:08:05.028Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-X-HLS.html</loc>
+    <lastmod>2024-09-30T02:20:00.957Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/index.html</loc>
-    <lastmod>2024-09-24T22:08:05.078Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.007Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-2.html</loc>
+    <lastmod>2024-09-30T02:20:00.957Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/learning-more.html</loc>
-    <lastmod>2024-09-24T22:08:05.078Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.007Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lectures/HLS_Harmonized_landsat_and_Sentinal.html</loc>
-    <lastmod>2024-09-24T22:08:05.028Z</lastmod>
+    <lastmod>2024-09-30T02:20:00.958Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/index.html</loc>
-    <lastmod>2024-09-24T22:08:05.105Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.035Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/browser.html</loc>
-    <lastmod>2024-09-24T22:08:05.078Z</lastmod>
+    <lastmod>2024-09-30T02:20:01.008Z</lastmod>
   </url>
 </urlset>
