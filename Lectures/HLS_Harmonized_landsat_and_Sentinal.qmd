@@ -153,5 +153,65 @@ The list of HLS v2.0 Data Known Issues is maintained at [LP DAAC](https://lpdaac
 
 Although HLS does not use the Landsat Collection-2 surface reflectance data directly, it uses an atmospheric correction code that is similar to the one used to produce the Landssat Collection-2 surface reflectance data. Therefore, the HLS surface reflectance shares the same problems present in Collection-2; see the heading “Surface Reflectance Issues” at [landsat-collection-2-known-issues](https://www.usgs.gov/landsat-missions/landsat-collection-2-known-issues).
 
+## Lets Explore this Dataset - **Step 1** 
+
+Go to:
+
+[worldview.earthdata.nasa.gov](https://worldview.earthdata.nasa.gov/)
 
 
+## Lets Explore this Dataset - **Step 2** 
+
+Turn on all reference layers:
+
+![](Images/Worldview_reference_on.PNG)
+
+## Lets Explore this Dataset - **Step 3** 
+
+Remove all baselayers 
+
+![](Images/Remove all base layers.PNG)
+
+## Lets Explore this Dataset - **Step 4**
+
+* Click + Add layers
+
+**Select**
+
+* Science Disciplines
+
+* Land Surface
+
+* Corrected Reflectance
+
+## Lets Explore this Dataset - **Step 4b**
+
+![](Images/Add layers.PNG)
+
+## Lets Explore this Dataset - **Step 5**
+
+**Select**
+
+* Land Surface Reflectance
+
+* HLS: Landsat 8/9 OLI
+
+* Reflectance (Nadir BRDF adjusted)
+
+## Lets Explore this Dataset - **Step 5b**
+
+![](Images/Reflectance.PNG)
+
+
+## Lets Explore this Dataset - **Step 6**
+
+Repeat for HLS: Sentinal 2A/2B MSI
+![](Images/Senintal.PNG)
+
+## Explore Step 7
+
+* Try different dates
+
+* Try comparison Tool 
+
+* Get download link for data you want
