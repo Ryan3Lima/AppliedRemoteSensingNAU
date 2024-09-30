@@ -273,6 +273,167 @@
     ]
   },
   {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#overview",
+    "href": "Lab-Exercises/Lab-X-HLS.html#overview",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Overview",
+    "text": "Overview\nToday we are going to look at changes in vegetation greenness on the san Francisco peaks at the onset of fall and see if we can see a reduction of greenness as aspen start changing colors on the peaks.\nWe will look at Granule T12SVE for three dates:\n\n2019 Sept 30 - HLS.S30 Sentinal 2A/2B- Julian Day 2019273\n2019 October 5 - HLS.S30 Sentinal 2A/2B - Julian Day 2019278 (if time)\n2019 October 9 - HLS.L30 Landsat 8/9- Julian Day 2019282",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-1.-load-first-image",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-1.-load-first-image",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 1. Load First image",
+    "text": "Step 1. Load First image\n\nOpen ENVI 6.0\nOnce ENVI is Open, click File &gt; Open As &gt; Generic Formats &gt; TIFF\nNavigate to the dataset and open the following file:\n\n\nData Location: PATH /HLS/FallColorPeaks/JD2019273_20190930\n\n\nFilenames: HLS.S30.T12SVE.2019273T181139.v2.0.B01 through HLS.S30.T12SVE.2019273T181139.v2.0.B12\n\n\nSelect the bands B01 - B12 ***",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-2.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-2.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 2.",
+    "text": "Step 2.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-3.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-3.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 3.",
+    "text": "Step 3.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-4.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-4.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 4.",
+    "text": "Step 4.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-5.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-5.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 5.",
+    "text": "Step 5.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-6.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-6.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 6.",
+    "text": "Step 6.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-7.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-7.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 7.",
+    "text": "Step 7.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-8.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-8.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 8.",
+    "text": "Step 8.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-9.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-9.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 9.",
+    "text": "Step 9.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "Lab-Exercises/Lab-X-HLS.html#step-10.",
+    "href": "Lab-Exercises/Lab-X-HLS.html#step-10.",
+    "title": "Lab X - Harmonized Landsat and Sentinal",
+    "section": "Step 10.",
+    "text": "Step 10.",
+    "crumbs": [
+      "Lab Exercises",
+      "Lab X - Harmonized Landsat and Sentinal"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Applied Remote Sensing",
+    "section": "",
+    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Applied Remote Sensing",
+    "section": "",
+    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-remote-sensing",
+    "href": "index.html#what-is-remote-sensing",
+    "title": "Applied Remote Sensing",
+    "section": "What is Remote sensing?",
+    "text": "What is Remote sensing?\nRemote sensing is the process of acquiring information about the Earth’s surface without direct physical contact, typically through the use of satellites, drones, or aircraft. It involves capturing data across various wavelengths of the electromagnetic spectrum, such as visible light, infrared, microwave, or ultraviolet, using sensors or cameras mounted on these platforms.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#applications-of-remote-sensing",
+    "href": "index.html#applications-of-remote-sensing",
+    "title": "Applied Remote Sensing",
+    "section": "Applications of Remote Sensing:",
+    "text": "Applications of Remote Sensing:\n\nEnvironmental Monitoring: Tracking changes in land use, deforestation, desertification, and urbanization.\nAgriculture: Monitoring crop health, soil moisture, and yield prediction.\nWater Resources: Measuring surface water levels, mapping wetlands, and tracking snow cover.\nDisaster Management: Assessing the impact of natural disasters like floods, hurricanes, and wildfires.\nClimate Studies: Monitoring glaciers, sea level rise, and temperature changes.\nGeology: Identifying mineral deposits, faults, and mapping landforms.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
     "objectID": "Lab-Exercises/Lab-2.html",
     "href": "Lab-Exercises/Lab-2.html",
     "title": "Lab 2 - Getting your image ready for classification",
@@ -391,46 +552,6 @@
     "crumbs": [
       "Lab Exercises",
       "Lab 2 - Getting your image ready for classification"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Applied Remote Sensing",
-    "section": "",
-    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Applied Remote Sensing",
-    "section": "",
-    "text": "Welcome this is a draft site for the classes INF/EES/ENV 529",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#what-is-remote-sensing",
-    "href": "index.html#what-is-remote-sensing",
-    "title": "Applied Remote Sensing",
-    "section": "What is Remote sensing?",
-    "text": "What is Remote sensing?\nRemote sensing is the process of acquiring information about the Earth’s surface without direct physical contact, typically through the use of satellites, drones, or aircraft. It involves capturing data across various wavelengths of the electromagnetic spectrum, such as visible light, infrared, microwave, or ultraviolet, using sensors or cameras mounted on these platforms.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#applications-of-remote-sensing",
-    "href": "index.html#applications-of-remote-sensing",
-    "title": "Applied Remote Sensing",
-    "section": "Applications of Remote Sensing:",
-    "text": "Applications of Remote Sensing:\n\nEnvironmental Monitoring: Tracking changes in land use, deforestation, desertification, and urbanization.\nAgriculture: Monitoring crop health, soil moisture, and yield prediction.\nWater Resources: Measuring surface water levels, mapping wetlands, and tracking snow cover.\nDisaster Management: Assessing the impact of natural disasters like floods, hurricanes, and wildfires.\nClimate Studies: Monitoring glaciers, sea level rise, and temperature changes.\nGeology: Identifying mineral deposits, faults, and mapping landforms.",
-    "crumbs": [
-      "Welcome"
     ]
   },
   {

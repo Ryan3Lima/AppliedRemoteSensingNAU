@@ -37,6 +37,7 @@ website:
       - section: Lab-Exercises/index.qmd
         contents: 
           - Lab-Exercises/Lab-2.qmd
+          - Lab-Exercises/Lab-X-HLS.qmd
 
 
 
