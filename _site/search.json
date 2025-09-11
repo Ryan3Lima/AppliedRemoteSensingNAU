@@ -130,6 +130,17 @@
     ]
   },
   {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#timeline",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#timeline",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Timeline",
+    "text": "Timeline",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
     "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources",
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#resources-and-sources",
     "title": "Harmonized Landsat and Sentinel-2 Data",
@@ -167,7 +178,7 @@
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls",
     "title": "Harmonized Landsat and Sentinel-2 Data",
     "section": "HLS",
-    "text": "HLS\nAdvantages of HLS\n\n\nIncreased temporal frequency\nCommon gridding\nUnified atmospheric correction\nIllumination & view angle normalization\nSpectral bandpass adjustment",
+    "text": "HLS\nAdvantages of HLS\n\n\n\n\nIncreased temporal frequency\nCommon gridding\nUnified atmospheric correction\nIllumination & view angle normalization\nSpectral bandpass adjustment",
     "crumbs": [
       "Lectures",
       "Harmonized Landsat and Sentinel-2 Data"
@@ -178,7 +189,7 @@
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#potential-applications",
     "title": "Harmonized Landsat and Sentinel-2 Data",
     "section": "Potential Applications",
-    "text": "Potential Applications\n\n\nActive Fires\nSnow Extent\nAgriculture\nInland flooding\nUrban Applications",
+    "text": "Potential Applications\n\n\n\n\nActive Fires\nSnow Extent\nAgriculture\nInland flooding\nUrban Applications\nDisaster Alert - land change monitoring",
     "crumbs": [
       "Lectures",
       "Harmonized Landsat and Sentinel-2 Data"
@@ -233,7 +244,7 @@
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#hls-data-processing-3",
     "title": "Harmonized Landsat and Sentinel-2 Data",
     "section": "HLS Data Processing 3",
-    "text": "HLS Data Processing 3\n\nLP DAAC distributes both the L30 and S30 products:\nS30: MSI harmonized surface reflectance resampled to 30 m into the Sentinel-2 tiling system and adjusted to Landsat 8/9 spectral response function.\nL30: OLI harmonized surface reflectance and Top-of-Atmosphere (TOA) brightness temperature resampled to 30 m into the Sentinel-2 tiling system.",
+    "text": "HLS Data Processing 3\nLP DAAC distributes both the L30 and S30 products:\nS30: MSI harmonized surface reflectance resampled to 30 m into the Sentinel-2 tiling system and adjusted to Landsat 8/9 spectral response function.\nL30: OLI harmonized surface reflectance and Top-of-Atmosphere (TOA) brightness temperature resampled to 30 m into the Sentinel-2 tiling system.",
     "crumbs": [
       "Lectures",
       "Harmonized Landsat and Sentinel-2 Data"
@@ -244,7 +255,7 @@
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#temporal-coverage",
     "title": "Harmonized Landsat and Sentinel-2 Data",
     "section": "Temporal Coverage",
-    "text": "Temporal Coverage\n\n\n\nData Source\nHLS Start Date\n\n\n\n\nLandsat-8\n2013-04-11\n\n\nSentinel-2A\n2015-11-30\n\n\nSentinel-2B\n2017-07-05\n\n\nLandsat-9\n2021-10-31",
+    "text": "Temporal Coverage\n\n\n\nData Source\nHLS Start Date\n\n\n\n\nLandsat-8\n2013-04-11\n\n\nSentinel-2A\n2015-11-30\n\n\nSentinel-2B\n2017-07-05\n\n\nLandsat-9\n2021-10-31\n\n\nSentinal-2C\n2024-09-05",
     "crumbs": [
       "Lectures",
       "Harmonized Landsat and Sentinel-2 Data"
@@ -266,7 +277,7 @@
     "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#note-known-issues",
     "title": "Harmonized Landsat and Sentinel-2 Data",
     "section": "Note: Known Issues",
-    "text": "Note: Known Issues\nThe list of HLS v2.0 Data Known Issues is maintained at LP DAAC\nAlthough HLS does not use the Landsat Collection-2 surface reflectance data directly, it uses an atmospheric correction code that is similar to the one used to produce the Landssat Collection-2 surface reflectance data. Therefore, the HLS surface reflectance shares the same problems present in Collection-2; see the heading “Surface Reflectance Issues” at landsat-collection-2-known-issues.",
+    "text": "Note: Known Issues\nThe list of HLS v2.0 Data Known Issues is maintained at LP DAAC\n\n☁️ Fmask omission (pre-2022 water/cloud-shadow)\n❄️ Snow reflectance inconsistencies\n📡 High-latitude multiple overpass fusions\n🌫️ Bright surfaces: overestimated aerosol",
     "crumbs": [
       "Lectures",
       "Harmonized Landsat and Sentinel-2 Data"

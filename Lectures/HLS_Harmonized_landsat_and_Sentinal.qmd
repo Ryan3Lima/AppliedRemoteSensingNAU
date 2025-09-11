@@ -3,13 +3,19 @@ title: Harmonized Landsat and Sentinel-2 Data
 author: Teki Sankey and Ryan Lima
 format: 
     revealjs:
-        theme: dark
+        theme: solarized
         smaller: true
         scrollable: true
 ---
 ## Introduction 
 
-{{<video https://www.youtube.com/embed/ZEQKPveOhrk width ="100%" height="100%">}}
+{{<video https://youtu.be/63ljR84c85M?si=54bbu1CyG2tdKuqi width ="100%" height="100%">}}
+
+## Timeline 
+
+![](https://earthdata.nasa.gov/s3fs-public/styles/hds_large/public/imported/landsat_sentinel_constellation.png?VersionId=otU3a0erP0eneEkxmOttg9XJOTgyZQGc&itok=LaY8FEV0)
+
+
 
 ## Resources and Sources 
 
@@ -40,6 +46,9 @@ The combined measurement enables global observations of the land every 2–3 day
 
 **Advantages of HLS**
 
+::::{.columns}
+
+:::{.column width ="50%"}
 ::: {.incremental}
 - Increased temporal frequency
 - Common gridding
@@ -47,9 +56,18 @@ The combined measurement enables global observations of the land every 2–3 day
 - Illumination & view angle normalization
 - Spectral bandpass adjustment
 :::
+:::
+
+:::{.column widght = "50%"}
+![](https://earthdata.nasa.gov/s3fs-public/styles/hds_hero_half/public/2024-09/hls-th.jpg?VersionId=jMkLtvE55yK._7JZZvqld4th1uv8w4d9&itok=StTj_gCp)
+:::
+::::
 
 ## Potential Applications {.smaller}
 
+::::{.columns}
+
+:::{.column width ="50%"}
 ::: {.incremental}
 
 - Active Fires
@@ -57,8 +75,14 @@ The combined measurement enables global observations of the land every 2–3 day
 - Agriculture
 - Inland flooding
 - Urban Applications
+- Disaster Alert - land change monitoring
+:::
 :::
 
+:::{.column widght = "50%"}
+![](https://earthdata.nasa.gov/s3fs-public/styles/hds_hero_quarter/public/2024-10/hls-project-hero-1.jpg?VersionId=MFfWIWTWih4wqTCKW.vbc7qm3ywdkyVZ&itok=CkKfT8PH)
+:::
+::::
 ## Naming Conventions{.smaller}
 
 In this example of a swath product, the filename **HLS.S30.T60HTE.2022103T222539.v2.0.B01.tif** indicates:
@@ -78,7 +102,7 @@ In this example of a swath product, the filename **HLS.S30.T60HTE.2022103T222539
 
 The HLS tiling system is identical to the one used for Sentinel-2. The tiles’ dimensions are 109.8 km squares with an overlap of 4,900 m on each side. The system is aligned with the Military Grid Reference System (MGRS), and its naming convention is derived from the UTM (Universal Transverse Mercator) system. The UTM system divides the Earth’s surface into 60 vertical zones. Each UTM zone has a vertical width of 6° of longitude and horizontal width of 8° of latitude, as shown in the map below. Each UTM zone is subdivided into MGRS 110 x 110 km zones.
 
-![](https://lpdaac.usgs.gov/media/images/MGRS_Tiling_Grid.width-800.jpg)
+![](https://earthdata.nasa.gov/s3fs-public/styles/hds_large/public/2025-05/MGRS_Tiling_Grid.width-800.jpg?VersionId=SOsAnZi1w.KROQlNNA42rfj5AwK_mjLP&itok=RwtN678I)
 
 ## HLS Data Processing 1 {.smaller}
 
@@ -108,13 +132,15 @@ Three types of products are then generated:
 
 ## HLS Data Processing 3 {.smaller}
 
-![](https://lpdaac.usgs.gov/media/images/HLS_Processing.width-800.jpg)
 
 LP DAAC distributes both the L30 and S30 products:
 
 **S30:** MSI harmonized surface reflectance resampled to 30 m into the Sentinel-2 tiling system and adjusted to Landsat 8/9 spectral response function.
 
 **L30:** OLI harmonized surface reflectance and Top-of-Atmosphere (TOA) brightness temperature resampled to 30 m into the Sentinel-2 tiling system.
+
+![](https://earthdata.nasa.gov/s3fs-public/styles/hds_large/public/2022-01/HLS_Workflow.jpeg?VersionId=YSi35T2TekdkoVZQzDOSMcaau002aPLy&itok=zWYe7HlL)
+
 
 
 ## Temporal Coverage {.smaller}
@@ -125,6 +151,7 @@ LP DAAC distributes both the L30 and S30 products:
 | Sentinel-2A      | 2015-11-30     |
 | Sentinel-2B      | 2017-07-05     |
 | Landsat-9        | 2021-10-31     |
+| Sentinal-2C      | 2024-09-05     |
 
 
 ## Spectral bands {.smaller}
@@ -147,11 +174,23 @@ LP DAAC distributes both the L30 and S30 products:
 | band10                 | \-                     | 10              | \-              | 10.60 – 11.19            | 10.895              |Thermal Infrared 1 |
 | band11                 | \-                     | 11              | \-              | 11.50 – 12.51            | 12.005              |Thermal Infrared 2 |
 
+---
+
+::: aside
+Angle bands (SZA, SAA, VZA, VAA) now included in V2.0.
+:::
+
 ## Note: Known Issues
 
 The list of HLS v2.0 Data Known Issues is maintained at [LP DAAC](https://lpdaac.usgs.gov/news/hls-quality-data-issue/)
 
-Although HLS does not use the Landsat Collection-2 surface reflectance data directly, it uses an atmospheric correction code that is similar to the one used to produce the Landssat Collection-2 surface reflectance data. Therefore, the HLS surface reflectance shares the same problems present in Collection-2; see the heading “Surface Reflectance Issues” at [landsat-collection-2-known-issues](https://www.usgs.gov/landsat-missions/landsat-collection-2-known-issues).
+- ☁️ Fmask omission (pre-2022 water/cloud-shadow)
+
+- ❄️ Snow reflectance inconsistencies
+
+- 📡 High-latitude multiple overpass fusions
+
+- 🌫️ Bright surfaces: overestimated aerosol
 
 ## Lets Explore this Dataset - **Step 1** 
 
