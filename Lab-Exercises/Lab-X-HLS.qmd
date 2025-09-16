@@ -10,7 +10,7 @@ author: Ryan E Lima
 
 Today we are going to look at changes in vegetation greenness on the san Francisco peaks at the onset of fall and see if we can see a reduction of greenness as aspen start changing colors on the peaks.
 
-We will look at Granule T12SVE for three dates:
+We will look at Granule T12SVE for two dates:
 
 * 2019 Sept 30  - HLS.S30 Sentinal 2A/2B- Julian Day 2019273
 * 2019 October 9 - HLS.L30 Landsat 8/9- Julian Day 2019282
@@ -92,6 +92,8 @@ We will look at Granule T12SVE for three dates:
 
 * In the **display** tab of the *Edit ENVI Header* window, click on the Bands one at a time and re-name them one at a time
 
+> **Note**: If you are running a different version of ENVI you will not have a *display* tab, you simply scroll down to the band name section of the edit header window.
+
 Band 1(Coastal_Aerosol:HLS.S30.T12SVE.2019273T181139.v2.0.B01.tif) = **B01 Coastal Aerosol**
 
 Band 2(Blue:HLS.S30.T12SVE.2019273T181139.v2.0.B02.tif) = **B02 Blue**
@@ -167,7 +169,8 @@ Band 13 (NIR_Narrow:HLS.S30.T12SVE.2019273T181139.v2.0.B8A.tif) = **B8A NIR Narr
 
 * Once the proper bands are selected, hit the **Load Data** button
 
-* (optional) you can try changing how the data is displayed by switching from *2% linear* to *Gaussian* or others, you can also adjust the brightness and contrast
+* (optional) you can try changing how the data is displayed by switching from *2% linear* to *Gaussian* or others.
+Personally I find the *square root* works best. You can also adjust the brightness and contrast if you so desire. 
 
 ![](Images/HLS_Step4_Gaussian.PNG)
 
@@ -200,6 +203,8 @@ Band 13 (NIR_Narrow:HLS.S30.T12SVE.2019273T181139.v2.0.B8A.tif) = **B8A NIR Narr
 ## **Step 6. Repeat steps 1 - 5 for L30 granule HLS.L30.T12SVE.2019282T180335.v2.0**
 
 NOTE THE BANDS ARE SLIGHTLY DIFFERENT SO CHANGE THE NAMES AND WAVELENGTHS AS SHOWN BELOW
+
+**We use `band01` for the L30 data instead of `B01` for S30, so its easier to differentiate the files we are using.**
 
 
 **Rename L30 bands** *Edit Header File*
@@ -270,7 +275,7 @@ Band 10(TIRS2:HLS.L30.T12SVE.2019282T180335.v2.0.B11.tif) = **band11 TIRS2**
 
 > I suggest you close and restart ENVI at this point
 
-* With ENVI 6.0 ReOpened
+* With ENVI 6.0 Re-Opened
 
 * Click *File > Open* 
 
