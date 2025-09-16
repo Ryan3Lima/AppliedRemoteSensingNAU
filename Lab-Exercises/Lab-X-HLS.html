@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2955e6c0f22443840e27ac055d1d73cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b067a8afed38e3c454db41c0d256aaa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-2955e6c0f22443840e27ac055d1d73cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4f4d60cfbc3b1e3dbcd7f2eeb7587ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-402e965e5ec416fa8857416f3419a396.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4f4d60cfbc3b1e3dbcd7f2eeb7587ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -389,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>Today we are going to look at changes in vegetation greenness on the san Francisco peaks at the onset of fall and see if we can see a reduction of greenness as aspen start changing colors on the peaks.</p>
-<p>We will look at Granule T12SVE for three dates:</p>
+<p>We will look at Granule T12SVE for two dates:</p>
 <ul>
 <li>2019 Sept 30 - HLS.S30 Sentinal 2A/2B- Julian Day 2019273</li>
 <li>2019 October 9 - HLS.L30 Landsat 8/9- Julian Day 2019282</li>
@@ -478,6 +478,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>In the <strong>display</strong> tab of the <em>Edit ENVI Header</em> window, click on the Bands one at a time and re-name them one at a time</li>
 </ul>
+<blockquote class="blockquote">
+<p><strong>Note</strong>: If you are running a different version of ENVI you will not have a <em>display</em> tab, you simply scroll down to the band name section of the edit header window.</p>
+</blockquote>
 <p>Band 1(Coastal_Aerosol:HLS.S30.T12SVE.2019273T181139.v2.0.B01.tif) = <strong>B01 Coastal Aerosol</strong></p>
 <p>Band 2(Blue:HLS.S30.T12SVE.2019273T181139.v2.0.B02.tif) = <strong>B02 Blue</strong></p>
 <p>Band 3 (Green:HLS.S30.T12SVE.2019273T181139.v2.0.B03.tif) = <strong>B03 Green</strong></p>
@@ -605,7 +608,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="Images/HLS_Step4_selectRGB.PNG" class="img-fluid"></p>
 <ul>
 <li><p>Once the proper bands are selected, hit the <strong>Load Data</strong> button</p></li>
-<li><p>(optional) you can try changing how the data is displayed by switching from <em>2% linear</em> to <em>Gaussian</em> or others, you can also adjust the brightness and contrast</p></li>
+<li><p>(optional) you can try changing how the data is displayed by switching from <em>2% linear</em> to <em>Gaussian</em> or others. Personally I find the <em>square root</em> works best. You can also adjust the brightness and contrast if you so desire.</p></li>
 </ul>
 <p><img src="Images/HLS_Step4_Gaussian.PNG" class="img-fluid"></p>
 <hr>
@@ -639,6 +642,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-6.-repeat-steps-1---5-for-l30-granule-hls.l30.t12sve.2019282t180335.v2.0" class="level2">
 <h2 class="anchored" data-anchor-id="step-6.-repeat-steps-1---5-for-l30-granule-hls.l30.t12sve.2019282t180335.v2.0"><strong>Step 6. Repeat steps 1 - 5 for L30 granule HLS.L30.T12SVE.2019282T180335.v2.0</strong></h2>
 <p>NOTE THE BANDS ARE SLIGHTLY DIFFERENT SO CHANGE THE NAMES AND WAVELENGTHS AS SHOWN BELOW</p>
+<p><strong>We use <code>band01</code> for the L30 data instead of <code>B01</code> for S30, so its easier to differentiate the files we are using.</strong></p>
 <p><strong>Rename L30 bands</strong> <em>Edit Header File</em></p>
 <p>Band 1(Coastal_Aerosol:HLS.L30.T12SVE.2019282T180335.v2.0.B01.tif) = <strong>band01 Coastal Aerosol</strong></p>
 <p>Band 2(Blue:HLS.L30.T12SVE.2019282T180335.v2.0.B02.tif) = <strong>band02 Blue</strong></p>
@@ -760,7 +764,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I suggest you close and restart ENVI at this point</p>
 </blockquote>
 <ul>
-<li><p>With ENVI 6.0 ReOpened</p></li>
+<li><p>With ENVI 6.0 Re-Opened</p></li>
 <li><p>Click <em>File &gt; Open</em></p></li>
 <li><p>Navigate to the directory you saved the EVI images in</p></li>
 <li><p>Select One of the EVI image files ending in .HDR and click ok</p></li>
