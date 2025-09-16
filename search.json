@@ -264,6 +264,39 @@
     ]
   },
   {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#tutorial-details",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#tutorial-details",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "Tutorial Details",
+    "text": "Tutorial Details\nWe will examine S30 and L30 data from two dates and look for differences in EVI.\nThe Enhanced Vegetation Index (EVI) is a satellite-derived vegetation index designed to quantify plant “greenness” and improve on the widely used Normalized Difference Vegetation Index (NDVI). Like NDVI, it uses the contrast between red and near-infrared reflectance to measure vegetation density and health, but EVI also incorporates the blue band and additional correction factors. Specifically, EVI corrects for atmospheric scattering (e.g., from aerosols) and reduces the influence of soil background, which makes it more sensitive in areas of dense vegetation where NDVI tends to saturate. Because of this, EVI is especially useful for monitoring ecosystems with high biomass, detecting subtle changes in canopy structure, and improving accuracy in agricultural and forest studies.",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#evi-continued",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#evi-continued",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "EVI continued",
+    "text": "EVI continued\nThe standard EVI formula is:\n\\[\nEVI = G \\times \\frac{(NIR - RED)}{(NIR + C_1 \\times RED - C_2 \\times BLUE + L)}\n\\]\n\\[\nEVI_{L30} = 2.5 \\times \\frac{(band05 - band04)}{(band05 + 6 \\times band04 - 7.5 \\times band02 + 1)}\n\\]\n\\[\nEVI_{S30} = 2.5 \\times \\frac{(B8 - B4)}{(B8 + 6 \\times B4 - 7.5 \\times B2 + 1)}\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
+    "objectID": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#evi-band-mapping-for-hls",
+    "href": "Lectures/HLS_Harmonized_landsat_and_Sentinal.html#evi-band-mapping-for-hls",
+    "title": "Harmonized Landsat and Sentinel-2 Data",
+    "section": "EVI Band Mapping for HLS",
+    "text": "EVI Band Mapping for HLS\n\n\n\n\n\n\n\n\n\n\nComponent\nLandsat 8/9 (HLS L30)\nWavelength Range (µm)\nSentinel-2 (HLS S30)\nWavelength Range (µm)\n\n\n\n\nNIR\nband05\n0.85 – 0.88\nB08\n0.784 – 0.899\n\n\nRED\nband04\n0.64 – 0.67\nB04\n0.646 – 0.684\n\n\nBLUE\nband02\n0.45 – 0.51\nB02\n0.458 – 0.523",
+    "crumbs": [
+      "Lectures",
+      "Harmonized Landsat and Sentinel-2 Data"
+    ]
+  },
+  {
     "objectID": "transition-from-rmarkdown.html",
     "href": "transition-from-rmarkdown.html",
     "title": "Transition from RMarkdown",
