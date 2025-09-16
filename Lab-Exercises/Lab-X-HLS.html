@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2955e6c0f22443840e27ac055d1d73cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b067a8afed38e3c454db41c0d256aaa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-2955e6c0f22443840e27ac055d1d73cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4f4d60cfbc3b1e3dbcd7f2eeb7587ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-402e965e5ec416fa8857416f3419a396.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4f4d60cfbc3b1e3dbcd7f2eeb7587ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -392,7 +392,6 @@ ul.task-list li input[type="checkbox"] {
 <p>We will look at Granule T12SVE for three dates:</p>
 <ul>
 <li>2019 Sept 30 - HLS.S30 Sentinal 2A/2B- Julian Day 2019273</li>
-<li>2019 October 5 - HLS.S30 Sentinal 2A/2B - Julian Day 2019278 (if time)</li>
 <li>2019 October 9 - HLS.L30 Landsat 8/9- Julian Day 2019282</li>
 </ul>
 </section>
@@ -402,8 +401,13 @@ ul.task-list li input[type="checkbox"] {
 <p>First we will load the granule HLS.S30.T12SVE.2019273T181139.v2.0.B* looking the Flagstaff Area on September 30th 2019</p>
 </blockquote>
 <ul>
-<li><p>Open ENVI 6.0</p></li>
-<li><p>Once ENVI is Open, click <em>File &gt; Open As &gt; Generic Formats &gt; TIFF</em></p></li>
+<li>Open ENVI 5.6 or higher</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Note</strong> These Directions are for ENVI 6.0 but depending on the version of ENVI that you are running, some of the tools may be in slightly different places.</p>
+</blockquote>
+<ul>
+<li>Once ENVI is Open, click <em>File &gt; Open As &gt; Generic Formats &gt; TIFF</em></li>
 </ul>
 <p><img src="Images/HLS_Step1_OpenAs.PNG" class="img-fluid"></p>
 <ul>
@@ -636,17 +640,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="step-6.-repeat-steps-1---5-for-l30-granule-hls.l30.t12sve.2019282t180335.v2.0"><strong>Step 6. Repeat steps 1 - 5 for L30 granule HLS.L30.T12SVE.2019282T180335.v2.0</strong></h2>
 <p>NOTE THE BANDS ARE SLIGHTLY DIFFERENT SO CHANGE THE NAMES AND WAVELENGTHS AS SHOWN BELOW</p>
 <p><strong>Rename L30 bands</strong> <em>Edit Header File</em></p>
-<p>Band 1(Coastal_Aerosol:HLS.L30.T12SVE.2019282T180335.v2.0.B01.tif) = <strong>B01 Coastal Aerosol</strong></p>
-<p>Band 2(Blue:HLS.L30.T12SVE.2019282T180335.v2.0.B02.tif) = <strong>B02 Blue</strong></p>
-<p>Band 3(Green:HLS.L30.T12SVE.2019282T180335.v2.0.B03.tif) = <strong>B03 Green</strong></p>
-<p>Band 4(Red:HLS.L30.T12SVE.2019282T180335.v2.0.B04.tif) = <strong>B04 Red</strong></p>
-<p>Band 5(NIR:HLS.L30.T12SVE.2019282T180335.v2.0.B05.tif) = <strong>B05 NIR</strong></p>
-<p>Band 6(SWIR1:HLS.L30.T12SVE.2019282T180335.v2.0.B06.tif) = <strong>B06 SWIR 1</strong></p>
-<p>Band 7(SWIR2:HLS.L30.T12SVE.2019282T180335.v2.0.B07.tif) = <strong>B07 SWIR 2</strong></p>
+<p>Band 1(Coastal_Aerosol:HLS.L30.T12SVE.2019282T180335.v2.0.B01.tif) = <strong>band01 Coastal Aerosol</strong></p>
+<p>Band 2(Blue:HLS.L30.T12SVE.2019282T180335.v2.0.B02.tif) = <strong>band02 Blue</strong></p>
+<p>Band 3(Green:HLS.L30.T12SVE.2019282T180335.v2.0.B03.tif) = <strong>band03 Green</strong></p>
+<p>Band 4(Red:HLS.L30.T12SVE.2019282T180335.v2.0.B04.tif) = <strong>band04 Red</strong></p>
+<p>Band 5(NIR:HLS.L30.T12SVE.2019282T180335.v2.0.B05.tif) = <strong>band05 NIR</strong></p>
+<p>Band 6(SWIR1:HLS.L30.T12SVE.2019282T180335.v2.0.B06.tif) = <strong>band06 SWIR 1</strong></p>
+<p>Band 7(SWIR2:HLS.L30.T12SVE.2019282T180335.v2.0.B07.tif) = <strong>band07 SWIR 2</strong></p>
 <p>NO BAND 8</p>
-<p>Band 8(Cirrus:HLS.L30.T12SVE.2019282T180335.v2.0.B09.tif) = <strong>B09 Cirrus</strong></p>
-<p>Band 9(TIRS1:HLS.L30.T12SVE.2019282T180335.v2.0.B10.tif) = <strong>B10 TIRS1</strong></p>
-<p>Band 10(TIRS2:HLS.L30.T12SVE.2019282T180335.v2.0.B11.tif) = <strong>B11 TIRS2</strong></p>
+<p>Band 8(Cirrus:HLS.L30.T12SVE.2019282T180335.v2.0.B09.tif) = <strong>band09 Cirrus</strong></p>
+<p>Band 9(TIRS1:HLS.L30.T12SVE.2019282T180335.v2.0.B10.tif) = <strong>band10 TIRS1</strong></p>
+<p>Band 10(TIRS2:HLS.L30.T12SVE.2019282T180335.v2.0.B11.tif) = <strong>band11 TIRS2</strong></p>
 <p><strong>Change Wavelengths</strong> <em>Edit Header File</em></p>
 <table class="caption-top table">
 <thead>
