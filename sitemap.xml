@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lectures/HLS_Harmonized_landsat_and_Sentinal.html</loc>
+    <lastmod>2025-09-16T23:13:02.588Z</lastmod>
+  </url>
+  <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/transition-from-rmarkdown.html</loc>
-    <lastmod>2025-09-16T22:59:17.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/jupyter.html</loc>
-    <lastmod>2025-09-16T22:59:17.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/browser.html</loc>
-    <lastmod>2025-09-16T22:59:17.761Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/learning-more.html</loc>
-    <lastmod>2025-09-16T22:59:17.761Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-2.html</loc>
-    <lastmod>2025-09-16T22:59:17.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/index.html</loc>
-    <lastmod>2025-09-16T22:59:17.759Z</lastmod>
+    <lastmod>2025-09-16T23:13:02.680Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-X-HLS.html</loc>
-    <lastmod>2025-09-16T23:11:08.456Z</lastmod>
+    <lastmod>2025-09-16T23:13:02.588Z</lastmod>
   </url>
   <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lectures/HLS_Harmonized_landsat_and_Sentinal.html</loc>
-    <lastmod>2025-09-16T22:59:17.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lectures/Tutorial_HLS_EVI.html</loc>
-    <lastmod>2025-09-16T22:59:17.693Z</lastmod>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/jupyter.html</loc>
+    <lastmod>2025-09-16T23:13:02.680Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/index.html</loc>
-    <lastmod>2025-09-16T22:59:17.792Z</lastmod>
+    <lastmod>2025-09-16T23:13:02.680Z</lastmod>
   </url>
   <url>
     <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/rstudio.html</loc>
-    <lastmod>2025-09-16T22:59:17.794Z</lastmod>
+    <lastmod>2025-09-16T23:13:02.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/quarto-workflows/browser.html</loc>
+    <lastmod>2025-09-16T23:13:02.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lab-Exercises/Lab-2.html</loc>
+    <lastmod>2025-09-16T23:13:02.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/index.html</loc>
+    <lastmod>2025-09-16T23:13:02.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/learning-more.html</loc>
+    <lastmod>2025-09-16T23:13:02.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryan3lima.github.io/AppliedRemoteSensingNAU/Lectures/Tutorial_HLS_EVI.html</loc>
+    <lastmod>2025-09-16T23:13:02.607Z</lastmod>
   </url>
 </urlset>
