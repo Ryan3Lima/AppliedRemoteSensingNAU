@@ -4,6 +4,12 @@ author: Ryan E Lima
 ---
 # About HLS
 
+The Harmonized Landsat and Sentinel-2 (HLS) dataset is a NASA product that combines imagery from Landsat 8/9 and Sentinel-2A/B into a single, consistent surface reflectance record. 
+The data are processed to align spatial resolution (30 m), spectral bands, and radiometric calibration, while also correcting for differences in acquisition time, geometry, and atmospheric conditions. 
+This harmonization provides frequent observations (every 2–3 days globally) with high spatial detail, making it especially useful for tracking vegetation dynamics, land cover change, water resources, 
+and agricultural monitoring. Researchers and practitioners rely on HLS because it balances the strengths of both missions—Landsat’s long historical record and Sentinel-2’s finer revisit cycle—into 
+a continuous, analysis-ready dataset.
+
 # Tutorial
 
 ## Overview
